@@ -1,186 +1,184 @@
 :root {
-    /* PALETA */
-    --frieren: #14129F;
-    --spiderman: #00153A;
-    --lux: #F57848;
-    --nieve: #f1f1f1;
+  /* PALETA DE COLORES*/
+  --frieren: #14129f;
+  --spiderman: #00153a;
+  --lux: #f57848;
+  --nieve: #f1f1f1;
 
-    /* Colores de maqueteo */
-    --red: #ff0000;
-    --blue: #0000ff;
-    --yellow: #ffff00;
-    --green: #00ff00;
-    --cyan: #00ffff;
-    --orange: #ff5e00;
-    --magenta: #ff00ff;
-    --black: #000000;
-    --white: #ffffff;
+  /* Colores de maqueteo */
+  --red: #ff0000;
+  --blue: #0000ff;
+  --yellow: #ffff00;
+  --green: #00ff00;
+  --cyan: #00ffff;
+  --orange: #ff5e00;
+  --magenta: #ff00ff;
+  --black: #000000;
+  --white: #ffffff;
 
-    /* BRAND COLORS */
-    --wzp: #47c254;
-
+  /* BRAND COLORS */
+  --wzp: #47c254;
 }
 
 .color-none {
-    color: none !important;
+  color: none !important;
 }
 
 .bgc-none {
-    background-color: none !important;
+  background-color: none !important;
 }
 
 /* PALETA */
 .frieren {
-    color: var(--frieren);
+  color: var(--frieren);
 }
 .spiderman {
-    color: var(--spiderman);
+  color: var(--spiderman);
 }
 .lux {
-    color: var(--lux);
+  color: var(--lux);
 }
 .nieve {
-    color: var(--nieve);
+  color: var(--nieve);
 }
-
 
 /* Color */
 .red {
-    color: var(--red);
+  color: var(--red);
 }
 
 .blue {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .yellow {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 
 .green {
-    color: var(--green);
+  color: var(--green);
 }
 
 .cyan {
-    color: var(--cyan);
+  color: var(--cyan);
 }
 
 .orange {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 .magenta {
-    color: var(--magenta);
+  color: var(--magenta);
 }
 
 .black {
-    color: var(--black);
+  color: var(--black);
 }
 
 .white {
-    color: var(--white);
+  color: var(--white);
 }
 
 /* fondo */
 
 .bgc-frieren {
-    background-color: var(--frieren);
+  background-color: var(--frieren);
 }
 .bgc-spiderman {
-    background-color: var(--spiderman);
+  background-color: var(--spiderman);
 }
 .bgc-lux {
-    background-color: var(--lux);
+  background-color: var(--lux);
 }
 .bgc-nieve {
-    background-color: var(--nieve);
+  background-color: var(--nieve);
 }
 
 .bgc-red {
-    background-color: var(--red);
+  background-color: var(--red);
 }
 
 .bgc-blue {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .bgc-yellow {
-    background-color: var(--yellow);
+  background-color: var(--yellow);
 }
 
 .bgc-green {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 .bgc-cyan {
-    background-color: var(--cyan);
+  background-color: var(--cyan);
 }
 
 .bgc-orange {
-    background-color: var(--orange);
+  background-color: var(--orange);
 }
 
 .bgc-magenta {
-    background-color: var(--magenta);
+  background-color: var(--magenta);
 }
 
 .bgc-black {
-    background-color: var(--black);
+  background-color: var(--black);
 }
 
 .bgc-white {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 /* borders */
 
 .border-frieren {
-    border-color: var(--frieren);
+  border-color: var(--frieren);
 }
 .border-spiderman {
-    border-color: var(--spiderman);
+  border-color: var(--spiderman);
 }
 .border-lux {
-    border-color: var(--lux);
+  border-color: var(--lux);
 }
 .border-nieve {
-    border-color: var(--nieve);
+  border-color: var(--nieve);
 }
 
 .border-red {
-    border-color: var(--red);
+  border-color: var(--red);
 }
 
 .border-blue {
-    border-color: var(--blue);
+  border-color: var(--blue);
 }
 
 .border-yellow {
-    border-color: var(--yellow);
+  border-color: var(--yellow);
 }
 
 .border-green {
-    border-color: var(--green);
+  border-color: var(--green);
 }
 
 .border-cyan {
-    border-color: var(--cyan);
+  border-color: var(--cyan);
 }
 
 .border-orange {
-    border-color: var(--orange);
+  border-color: var(--orange);
 }
 
 .border-magenta {
-    border-color: var(--magenta);
+  border-color: var(--magenta);
 }
 
 .border-black {
-    border-color: var(--black);
+  border-color: var(--black);
 }
 
 .border-white {
-    border-color: var(--white);
+  border-color: var(--white);
 }
 /* Fills  */
 /* Fondo Hover */

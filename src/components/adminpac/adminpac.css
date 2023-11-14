@@ -26,8 +26,9 @@
   margin-left: 3%;
 }
 
+/* Icono Filter */
 .search-container {
-  width: 25%;
+  width: 5%;
   margin: 25px 0 20px 20px;
   border-radius: 20px;
   overflow: hidden;
@@ -48,4 +49,8 @@ input[type='text'] {
 
 svg {
   margin-right: 10px;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
 }
