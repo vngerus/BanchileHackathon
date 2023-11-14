@@ -630,9 +630,6 @@ pointer-events: none;
 .rounded-p10 {
     border-radius: 10px;
 }
-.rounded-p20 {
-    border-radius: 20px;
-}
 
 /* ROUNDED DINAMICO */
 .rounded-stp10{
