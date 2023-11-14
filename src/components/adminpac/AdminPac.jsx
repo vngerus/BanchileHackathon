@@ -15,7 +15,7 @@ function AdminPac() {
               type='text'
               name='search'
               id='search'
-              placeholder='Buscar...'
+              placeholder='Buscar....'
             />
           </form>
         </div>
