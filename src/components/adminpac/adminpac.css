@@ -1,0 +1,31 @@
+.blue-rectangle {
+  width: 95%;
+  max-width: 1920px;
+  height: 6vh;
+  background-color: #004bd7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5vw;
+  margin-top: 2vh;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.form-container {
+  width: 95%;
+  max-width: 1920px;
+
+  background-color: #004bd7;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  font-size: 2vw;
+}
+
+.form-field {
+  flex: 1;
+  margin-right: 1vw;
+}
