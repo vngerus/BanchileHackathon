@@ -1,0 +1,139 @@
+:root {
+    /* Colores de maqueteo */
+    --red: #ff0000;
+    --blue: #0000ff;
+    --yellow: #ffff00;
+    --green: #00ff00;
+    --cyan: #00ffff;
+    --orange: #ff5e00;
+    --magenta: #ff00ff;
+    --black: #000000;
+    --white: #ffffff;
+
+    /* BRAND COLORS */
+    --wzp: #47c254;
+
+}
+
+.color-none {
+    color: none !important;
+}
+
+.bgc-none {
+    background-color: none !important;
+}
+
+/* Color */
+.red {
+    color: var(--red);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.green {
+    color: var(--green);
+}
+
+.cyan {
+    color: var(--cyan);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.magenta {
+    color: var(--magenta);
+}
+
+.black {
+    color: var(--black);
+}
+
+.white {
+    color: var(--white);
+}
+
+/* fondo */
+.bgc-red {
+    background-color: var(--red);
+}
+
+.bgc-blue {
+    background-color: var(--blue);
+}
+
+.bgc-yellow {
+    background-color: var(--yellow);
+}
+
+.bgc-green {
+    background-color: var(--green);
+}
+
+.bgc-cyan {
+    background-color: var(--cyan);
+}
+
+.bgc-orange {
+    background-color: var(--orange);
+}
+
+.bgc-magenta {
+    background-color: var(--magenta);
+}
+
+.bgc-black {
+    background-color: var(--black);
+}
+
+.bgc-white {
+    background-color: var(--white);
+}
+
+/* borders */
+.border-red {
+    border-color: var(--red);
+}
+
+.border-blue {
+    border-color: var(--blue);
+}
+
+.border-yellow {
+    border-color: var(--yellow);
+}
+
+.border-green {
+    border-color: var(--green);
+}
+
+.border-cyan {
+    border-color: var(--cyan);
+}
+
+.border-orange {
+    border-color: var(--orange);
+}
+
+.border-magenta {
+    border-color: var(--magenta);
+}
+
+.border-black {
+    border-color: var(--black);
+}
+
+.border-white {
+    border-color: var(--white);
+}
+/* Fills  */
+/* Fondo Hover */
+/* fondo */
+/* BRAND COLORS */
