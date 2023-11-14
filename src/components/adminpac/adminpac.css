@@ -1,8 +1,6 @@
 .blue-rectangle {
-  width: 95%;
-  max-width: 1920px;
-  height: 6vh;
-  background-color: #004bd7;
+  height: 5vh;
+  background-color: #002d80;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -15,17 +13,34 @@
 }
 
 .form-container {
-  width: 95%;
-  max-width: 1920px;
-
-  background-color: #004bd7;
+  margin-top: 30px;
+  background-color: #002d80;
   border-radius: 10px;
-  padding: 15px;
+  padding: 5px;
   color: white;
-  font-size: 2vw;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
-.form-field {
+.search-container {
+  width: 25%;
+  margin: 25px 0 20px 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+}
+
+input[type='text'] {
   flex: 1;
-  margin-right: 1vw;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }

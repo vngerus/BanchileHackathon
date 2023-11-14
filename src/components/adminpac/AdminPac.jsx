@@ -9,6 +9,16 @@ function AdminPac() {
       </div>
 
       <div>
+        <div className='search-container'>
+          <form action='#' method='get'>
+            <input
+              type='text'
+              name='search'
+              id='search'
+              placeholder='Buscar...'
+            />
+          </form>
+        </div>
         <div className='form-container'>
           <div className='form-row'>
             <input type='checkbox' style={{ marginRight: '10px' }} />
