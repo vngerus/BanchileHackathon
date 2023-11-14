@@ -6,9 +6,9 @@ function AdminPac() {
     <>
       <div className='admin-pac-container'>
         <div className='blue-rectangle'>Administrador PAC</div>
-      </div>
 
-      <div>
+
+
         <div className='form-container'>
           <div className='form-row'>
             <input type='checkbox' style={{ marginRight: '10px' }} />
@@ -22,6 +22,7 @@ function AdminPac() {
           <div className='form-field'>Código Servicio</div>
         </div>
       </div>
+
     </>
   );
 }
