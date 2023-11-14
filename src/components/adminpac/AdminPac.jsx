@@ -27,7 +27,7 @@ function AdminPac() {
           <div className='form-row'>
             <input type='checkbox' style={{ marginRight: '10px' }} />
           </div>
-          <div className='form-field'>RUT/RUN.</div>
+          <div className='form-field'>RUT/RUN</div>
           <div className='form-field'>Nombre</div>
           <div className='form-field'>Banco</div>
           <div className='form-field'>N° Cuenta</div>
