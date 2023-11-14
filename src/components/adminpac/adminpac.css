@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--nieve);
   font-size: 2.5vw;
   margin-top: 2vh;
   margin-right: 2%;
@@ -17,7 +17,7 @@
   background-color: var(--frieren);
   border-radius: 10px;
   padding: 5px;
-  color: white;
+  color: var(--nieve);
   font-size: 20px;
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ input[type='text'] {
   flex: 1;
   padding: 15px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--nieve);
   border-radius: 20px;
 }
 
