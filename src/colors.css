@@ -1,4 +1,10 @@
 :root {
+    /* PALETA */
+    --frieren: #14129F;
+    --spiderman: #00153A;
+    --lux: #F57848;
+    --nieve: #f1f1f1;
+
     /* Colores de maqueteo */
     --red: #ff0000;
     --blue: #0000ff;
@@ -22,6 +28,21 @@
 .bgc-none {
     background-color: none !important;
 }
+
+/* PALETA */
+.frieren {
+    color: var(--frieren);
+}
+.spiderman {
+    color: var(--spiderman);
+}
+.lux {
+    color: var(--lux);
+}
+.nieve {
+    color: var(--nieve);
+}
+
 
 /* Color */
 .red {
@@ -61,6 +82,20 @@
 }
 
 /* fondo */
+
+.bgc-frieren {
+    background-color: var(--frieren);
+}
+.bgc-spiderman {
+    background-color: var(--spiderman);
+}
+.bgc-lux {
+    background-color: var(--lux);
+}
+.bgc-nieve {
+    background-color: var(--nieve);
+}
+
 .bgc-red {
     background-color: var(--red);
 }
@@ -98,6 +133,20 @@
 }
 
 /* borders */
+
+.border-frieren {
+    border-color: var(--frieren);
+}
+.border-spiderman {
+    border-color: var(--spiderman);
+}
+.border-lux {
+    border-color: var(--lux);
+}
+.border-nieve {
+    border-color: var(--nieve);
+}
+
 .border-red {
     border-color: var(--red);
 }
