@@ -1,5 +1,8 @@
 import React from 'react';
 import './adminpac.css';
+import { Link } from 'react-router-dom';
+
+import Filtro from './filter.svg';
 
 function AdminPac() {
   return (
@@ -7,18 +10,11 @@ function AdminPac() {
       <div className='admin-pac-container'>
         <div className='blue-rectangle'>Administrador PAC</div>
       </div>
-
+      <Link as={Link} to='/filtro'>
+        <img src={Filtro} alt='Logo' className='search-container' />
+      </Link>
       <div>
-        <div className='search-container'>
-          <form action='#' method='get'>
-            <input
-              type='text'
-              name='search'
-              id='search'
-              placeholder='Buscar....'
-            />
-          </form>
-        </div>
+        <div className='search-container'></div>
         <div className='form-container'>
           <div className='form-row'>
             <input type='checkbox' style={{ marginRight: '10px' }} />
