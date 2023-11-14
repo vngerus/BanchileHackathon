@@ -14,7 +14,7 @@
 
 .form-container {
   margin-top: 30px;
-  background-color: #002d80;
+  background-color: var(--frieren);
   border-radius: 10px;
   padding: 5px;
   color: white;
