@@ -1,6 +1,6 @@
 .blue-rectangle {
   height: 5vh;
-  background-color: #002d80;
+  background-color: var(--frieren);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -45,7 +45,6 @@ input[type='text'] {
   border: 1px solid #ccc;
   border-radius: 20px;
 }
-
 
 svg {
   margin-right: 10px;

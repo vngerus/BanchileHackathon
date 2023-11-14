@@ -1,7 +1,5 @@
 import React from 'react';
 import './adminpac.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function AdminPac() {
   return (
@@ -14,8 +12,6 @@ function AdminPac() {
         <div className='search-container'>
           <form action='#' method='get'>
             <input
-              FontAwesomeIcon
-              icon={faSearch}
               type='text'
               name='search'
               id='search'
