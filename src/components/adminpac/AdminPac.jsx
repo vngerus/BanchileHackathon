@@ -103,21 +103,41 @@ function AdminPac() {
 
   const toggleRowSelection = (index) => {
     setSelectedRows((prevSelectedRows) => {
-      if (prevSelectedRows.includes(index)) {
-        return prevSelectedRows.filter((i) => i !== index);
-      } else {
-        return [...prevSelectedRows, index];
-      }
+      const updatedSelectedRows = prevSelectedRows.includes(index)
+        ? prevSelectedRows.filter((i) => i !== index)
+        : [...prevSelectedRows, index];
+  
+      // Si todos los elementos están seleccionados, desmarcar el checkbox de selección de todos
+      const allSelected = updatedSelectedRows.length === page.length;
+      setSelectAll(allSelected ? false : selectAll);
+  
+      return updatedSelectedRows;
     });
   };
 
+  const calculateTotalAmount = () => {
+    let totalAmount = 0;
+  
+    if (selectAll) {
+      // Si se seleccionan todos, sumar el monto de todas las filas
+      totalAmount = page.reduce((total, data) => total + parseFloat(data[4]), 0);
+    } else {
+      // Si no se seleccionan todos, sumar el monto solo de las filas seleccionadas
+      const selectedData = page.filter((data, index) => selectedRows.includes(index));
+      totalAmount = selectedData.reduce((total, data) => total + parseFloat(data[4]), 0);
+    }
+  
+    setMontoTotal(totalAmount);
+  };
   const toggleSelectAll = () => {
     setSelectAll((prev) => !prev);
+    calculateTotalAmount();
   };
 
   const iniPages = 1;
-  const finPages = 50;
-  const totalPages = 6958;
+  const finPages = 20;
+
+  
 
   const header = [
     'RUT/RUN',
@@ -164,15 +184,14 @@ function AdminPac() {
 
   useEffect(() => {
     // Calcular el monto total basado en los datos seleccionados
-    const selectedData = page.filter((data, index) =>
-      selectedRows.includes(index)
-    );
+    const selectedData = page.filter((data, index) => (selectAll || selectedRows.includes(index)));
     const calculatedTotal = selectedData.reduce(
       (total, data) => total + parseFloat(data[4]),
       0
     );
+  
     setMontoTotal(calculatedTotal);
-  }, [page, selectedRows]);
+  }, [page, selectedRows, selectAll]);
 
   const convertirMonto = (monto) => {
     return new Intl.NumberFormat('es-CL', {
@@ -204,7 +223,7 @@ function AdminPac() {
 
             <div className="pages">
               <div className="fsp-18">
-                {iniPages}-{finPages} de {totalPages}
+                {iniPages}-{finPages}
               </div>
               <div id="prev-page1" className="boton" onClick={Izq}>
                 <svg className="wp-15" viewBox="0 0 19 35">
