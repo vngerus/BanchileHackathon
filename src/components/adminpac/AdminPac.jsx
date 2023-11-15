@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './adminpac.css';
 import Data from '../adminpac/Data';
 import Banchile from './banchile-icon.png';
 import tusDatos from './Data.json';
 import * as XLSX from 'xlsx';
-import Switch from 'react-switch';
+import axios from 'axios';
 
 function AdminPac() {
   const [filtroVisible, setFiltroVisible] = useState(false);
@@ -19,6 +19,12 @@ function AdminPac() {
   const [productoFilter, setProductoFilter] = useState('APV');
   const [codigoServicioFilter, setCodigoServicioFilter] = useState('');
 
+  const [url, setUrl] = useState(`http://localhost:8080/filtrar`); //Filtro
+  const [page, setPage] = useState([]); //Filtro
+  useEffect(() => {
+    axios.get(url).then((response) => setPage(response.data.content));
+  }, [url]);
+
   const abrirFiltro = () => {
     setFiltroVisible(true);
   };
@@ -31,17 +37,41 @@ function AdminPac() {
   const [tipoProductoFilter, setTipoProductoFilter] = useState('');
 
   const filtrarDatos = () => {
-    console.log({
-      rutRunFilter,
-      nombreFilter,
-      bancoFilter,
-      numeroCuentaFilter,
-      montoFilter,
-      productoFilter,
-      codigoServicioFilter,
-      fechaPagoFilter,
-      tipoProductoFilter,
-    });
+    let urlAux = 'http://localhost:8080/filtrar?';
+
+    urlAux +=
+      rutRunFilter === '' ? '' : `rut=${encodeURIComponent(rutRunFilter)}&`;
+    urlAux +=
+      nombreFilter === ''
+        ? ''
+        : `nombreCliente=${encodeURIComponent(nombreFilter)}&`;
+    urlAux +=
+      productoFilter === ''
+        ? ''
+        : `nombreProducto=${encodeURIComponent(productoFilter)}&`;
+    urlAux +=
+      bancoFilter === ''
+        ? ''
+        : `nombreBanco=${encodeURIComponent(bancoFilter)}&`;
+    urlAux +=
+      numeroCuentaFilter === ''
+        ? ''
+        : `cuentaId=${encodeURIComponent(numeroCuentaFilter)}&`;
+    urlAux +=
+      montoFilter === '' ? '' : `monto=${encodeURIComponent(montoFilter)}&`;
+    urlAux +=
+      codigoServicioFilter === ''
+        ? ''
+        : `pacId=${encodeURIComponent(codigoServicioFilter)}&`;
+    urlAux +=
+      fechaPagoFilter === ''
+        ? ''
+        : `dia=${encodeURIComponent(fechaPagoFilter)}&`;
+    urlAux = urlAux.slice(0, -1);
+
+    console.log(urlAux);
+    setUrl(urlAux);
+    return;
   };
 
   const toggleRowSelection = (index) => {
@@ -54,7 +84,9 @@ function AdminPac() {
     });
   };
 
-
+  const toggleSelectAll = () => {
+    setSelectAll((prev) => !prev);
+  };
 
   const iniPages = 1;
   const finPages = 50;
@@ -218,6 +250,7 @@ function AdminPac() {
           </div> */}
 
           <Data
+            page={page}
             datos={tusDatos}
             selectAll={selectAll}
             onToggleRowSelection={toggleRowSelection}

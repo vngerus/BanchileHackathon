@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Data({ datos, selectAll, onToggleRowSelection }) {
+function Data({ page, datos, selectAll, onToggleRowSelection }) {
   const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
@@ -23,74 +23,42 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
     onToggleRowSelection(index);
   };
 
-  const URL = `http://localhost:8080/filtrar`;
+  /* const URL = `http://localhost:8080/filtrar`;
 
-  const [data, setData] = useState([]);
-  const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
+  const [page, setData] = useState([]); */
 
-  // useEffect(() => {
-  //     const fetchData = async () => {
-  //         const result = await axios.get(`https://localhost:8080/filtrar?page=${page}&size=10`);
-  //         setData(result.data.content);
-  //         setTotalPages(result.data.totalPages);
-  //     };
-
-  //     fetchData();
-  // }, [page]);
-
-  useEffect(() => {
+  /* useEffect(() => {
     axios.get(URL).then((response) => setData(response.data.content));
-  }, []);
+  }, [URL]); // Agregamos URL como dependencia del useEffect */
 
   return (
-    // <div>
-    //   <div className='form-data'>
-    //    
-    //       <div key={index} className='form-row'>
-    //         <input
-    //           className='check-box'
-    //           type='checkbox'
-    //           checked={selectAll || selectedItems.includes(index)}
-    //           onChange={() => toggleItemSelection(index)}
-    //         />
-    //         <div className='form-field'>{item['RUT/RUN']}</div>
-    //         <div className='form-field form-ancho'>{item['Nombre']}</div>
-    //         <div className='form-field form-ancho'>{item['Banco']}</div>
-    //         <div className='form-field'>{item['N° Cuenta']}</div>
-    //         <div className='form-field'>{item['Monto ($)']}</div>
-    //         <div className='form-field'>{item['Producto']}</div>
-    //         <div className='form-field'>{item['Código Servicio']}</div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
     <div className='border-table-margin'>
-      <table className="table">
+      <table className='table'>
         <thead className='table-header'>
           <tr>
             <th className='check-ancho'>
-              <input className='check-box'
-                type='checkbox'>
-              </input>
+              <input className='check-box' type='checkbox'></input>
             </th>
-            <th scope="col">RUT</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Banco</th>
-            <th scope="col">N cuenta</th>
-            <th scope="col">Monto</th>
-            <th scope="col">Producto</th>
-            <th scope="col">Codigo Servicio</th>
-            <th scope="col">Fecha</th>
+            <th scope='col'>RUT</th>
+            <th scope='col'>Nombre</th>
+            <th scope='col'>Banco</th>
+            <th scope='col'>N cuenta</th>
+            <th scope='col'>Monto</th>
+            <th scope='col'>Producto</th>
+            <th scope='col'>Codigo Servicio</th>
+            <th scope='col'>Fecha</th>
           </tr>
         </thead>
         <tbody>
-          {data.map((client) => (
-            <tr>
+          {page.map((client, index) => (
+            <tr key={index}>
               <td className='checkbox-ancho'>
-                <input className='check-box'
-                  type='checkbox'>
-                </input>
+                <input
+                  className='check-box'
+                  type='checkbox'
+                  checked={selectAll || selectedItems.includes(index)}
+                  onChange={() => toggleItemSelection(index)}
+                />
               </td>
               <td>{client[0]}</td>
               <td>{client[1]}</td>
@@ -101,8 +69,7 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
               <td>{client[6]}</td>
               <td>{client[7]}</td>
             </tr>
-          ))
-          }
+          ))}
         </tbody>
       </table>
     </div>
