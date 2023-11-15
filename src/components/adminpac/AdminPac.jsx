@@ -254,6 +254,7 @@ function AdminPac() {
             datos={tusDatos}
             selectAll={selectAll}
             onToggleRowSelection={toggleRowSelection}
+            onSelectAll={toggleSelectAll}
           />
         </div>
 

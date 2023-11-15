@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Data({ page, datos, selectAll, onToggleRowSelection }) {
+function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
   const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
@@ -23,13 +23,15 @@ function Data({ page, datos, selectAll, onToggleRowSelection }) {
     onToggleRowSelection(index);
   };
 
-  /* const URL = `http://localhost:8080/filtrar`;
-
-  const [page, setData] = useState([]); */
-
-  /* useEffect(() => {
-    axios.get(URL).then((response) => setData(response.data.content));
-  }, [URL]); // Agregamos URL como dependencia del useEffect */
+  const handleSelectAll = () => {
+    if (selectAll) {
+      onSelectAll(false);
+      setSelectedItems([]);
+    } else {
+      onSelectAll(true);
+      setSelectedItems(datos.map((_, index) => index));
+    }
+  };
 
   return (
     <div className='border-table-margin'>
@@ -37,7 +39,12 @@ function Data({ page, datos, selectAll, onToggleRowSelection }) {
         <thead className='table-header'>
           <tr>
             <th className='check-ancho'>
-              <input className='check-box' type='checkbox'></input>
+              <input
+                className='check-box'
+                type='checkbox'
+                checked={selectAll}
+                onChange={handleSelectAll}
+              />
             </th>
             <th scope='col'>RUT</th>
             <th scope='col'>Nombre</th>
@@ -56,7 +63,7 @@ function Data({ page, datos, selectAll, onToggleRowSelection }) {
                 <input
                   className='check-box'
                   type='checkbox'
-                  checked={selectAll || selectedItems.includes(index)}
+                  checked={selectedItems.includes(index)}
                   onChange={() => toggleItemSelection(index)}
                 />
               </td>
