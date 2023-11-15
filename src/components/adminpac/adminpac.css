@@ -119,6 +119,7 @@
 .form-data {
   display: flex;
   margin: 0px 24px;
+  padding-bottom: 10px;
   flex-wrap: wrap;
   background-color: var(--nieve);
   border-radius: 10px;
