@@ -8,6 +8,7 @@ import axios from 'axios';
 import { set } from 'date-fns';
 
 function AdminPac() {
+
   const [filtroVisible, setFiltroVisible] = useState(false);
   const [selectAll, setSelectAll] = useState(false);
   const [selectedRows, setSelectedRows] = useState([]);
@@ -23,9 +24,27 @@ function AdminPac() {
 
   const [url, setUrl] = useState(`http://localhost:8080/filtrar`); //Filtro
   const [page, setPage] = useState([]); //Filtro
+  const [maxPages, setMaxPages] = useState(0);
+  const [actualPage, setActualPage] = useState(0);
+
   useEffect(() => {
-    axios.get(url).then((response) => setPage(response.data.content));
-  }, [url]);
+    axios.get(url, { params: { page: actualPage } }).then((response) => {
+      setPage(response.data.content);
+      setMaxPages(response.data.totalPages);
+    });
+  }, [url, actualPage]);
+  
+  const Izq = () => {
+    if (actualPage > 0) {
+      setActualPage(actualPage - 1);
+    }
+  };
+  
+  const Der = () => {
+    if (actualPage < maxPages - 1) {
+      setActualPage(actualPage + 1);
+    }
+  };
 
   const abrirFiltro = () => {
     setFiltroVisible(true);
@@ -187,7 +206,7 @@ function AdminPac() {
               <div className="fsp-18">
                 {iniPages}-{finPages} de {totalPages}
               </div>
-              <div id="prev-page" className="boton">
+              <div id="prev-page1" className="boton" onClick={Izq}>
                 <svg className="wp-15" viewBox="0 0 19 35">
                   <path
                     fillRule="evenodd"
@@ -196,7 +215,7 @@ function AdminPac() {
                   />
                 </svg>
               </div>
-              <div id="prev-page" className="boton">
+              <div id="prev-page2" className="boton" onClick={Der}>
                 <svg className="wp-15 ro-180" viewBox="0 0 19 35">
                   <path
                     fillRule="evenodd"
