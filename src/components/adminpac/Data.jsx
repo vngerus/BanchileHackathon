@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Data({ datos, selectAll }) {
+function Data({ datos, selectAll, onToggleRowSelection }) {
   const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ function Data({ datos, selectAll }) {
         return [...prevSelected, index];
       }
     });
+    onToggleRowSelection(index);
   };
 
   const URL = `http://localhost:8080/filtrar`
