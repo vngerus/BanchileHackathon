@@ -134,9 +134,15 @@ function AdminPac() {
             </div>
           </div>
         </div>
+
+        {/* BOTON FINAL */}
+        <div className='hp-25'></div>
+        <div className='boton-exportar'>
+          <span className='fsp-36 fw-600'>Exportar selección</span>
+        </div>
       </div>
-      </>
-      );
+    </>
+  );
 }
 
 export default AdminPac;
