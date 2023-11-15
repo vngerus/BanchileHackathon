@@ -130,8 +130,13 @@ function AdminPac() {
     setMontoTotal(totalAmount);
   };
   const toggleSelectAll = () => {
-    setSelectAll((prev) => !prev);
-    calculateTotalAmount();
+    setSelectAll((prev) => {
+      if (prev) {
+        // Si estaba activado, desactivarlo y limpiar la lista de selectedRows
+        setSelectedRows([]);
+      }
+      return !prev;
+    });
   };
 
   const iniPages = 1;
