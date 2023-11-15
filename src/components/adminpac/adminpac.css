@@ -212,7 +212,9 @@ button {
   text-align: left;
   padding-left: 20px;
 }
-produc
+.titulo-casilla{
+  
+}
 .control {
   color: var(--spiderman);
   display: block;
