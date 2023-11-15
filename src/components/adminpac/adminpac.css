@@ -96,29 +96,28 @@
 .form-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
   background-color: var(--frieren);
   border-radius: 10px;
-  padding: 15px;
+  padding: 15px 0px;
+  margin: 20px 20px;
   color: var(--nieve);
   font-size: 18px;
   box-sizing: border-box;
-  margin-right: 3%;
-  margin-left: 3%;
+}
+
+.check-box {
+  margin: 0px 20px;
 }
 
 .form-data {
   display: flex;
+  margin: 0px 24px;
   flex-wrap: wrap;
-  margin-top: 30px;
   background-color: var(--nieve);
   border-radius: 10px;
-  padding: 15px;
   color: var(--frieren);
   font-size: 18px;
   box-sizing: border-box;
-  margin-right: 3%;
-  margin-left: 3%;
 }
 .form-row {
   display: flex;

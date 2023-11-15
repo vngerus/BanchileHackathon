@@ -138,10 +138,9 @@ function AdminPac() {
           )}
 
           <div className='form-container'>
-            <div className='form-row'>
+            <div className='check-box'>
               <input
                 type='checkbox'
-                style={{ marginRight: '10px' }}
                 checked={selectAll}
                 onChange={toggleSelectAll}
               />

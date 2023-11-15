@@ -27,8 +27,8 @@ function Data({ datos, selectAll }) {
         {datos.map((item, index) => (
           <div key={index} className='form-row'>
             <input
+              className='check-box'
               type='checkbox'
-              style={{ marginRight: '10px' }}
               checked={selectAll || selectedItems.includes(index)}
               onChange={() => toggleItemSelection(index)}
             />
