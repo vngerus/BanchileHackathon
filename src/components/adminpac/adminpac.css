@@ -1,5 +1,11 @@
+.admin-pac-container {
+  background-color: var(--frieren);
+  color: var(--nieve);
+  padding: 20px;
+  text-align: center;
+}
+
 .blue-rectangle {
-  height: 5vh;
   background-color: var(--frieren);
   border-radius: 10px;
   display: flex;
@@ -12,13 +18,32 @@
   margin-left: 2%;
 }
 
+.search-container {
+  width: 5%;
+  margin: 25px 0 20px 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.filtro-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--nieve);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .form-container {
   margin-top: 30px;
   background-color: var(--frieren);
   border-radius: 10px;
-  padding: 5px;
+  padding: 15px;
   color: var(--nieve);
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -26,31 +51,56 @@
   margin-left: 3%;
 }
 
-/* Icono Filter */
-.search-container {
-  width: 5%;
-  margin: 25px 0 20px 20px;
-  border-radius: 20px;
-  overflow: hidden;
+.form-row {
+  margin-bottom: 10px;
 }
 
-form {
-  display: flex;
-  align-items: center;
-}
-
-input[type='text'] {
+.form-field {
   flex: 1;
-  padding: 15px;
-  font-size: 16px;
-  border: 1px solid var(--nieve);
-  border-radius: 20px;
-}
-
-svg {
   margin-right: 10px;
 }
 
-.nav-link:hover {
-  color: #ffcc00;
+form {
+  display: block;
+  margin-top: 15px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--nieve);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--frieren);
+  color: var(--nieve);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--frieren);
+  background-color: var(--nieve);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--frieren);
 }
