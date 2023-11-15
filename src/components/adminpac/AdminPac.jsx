@@ -263,20 +263,20 @@ function AdminPac() {
                 />
                 <div className="f-nunito">
                   <div className="titulo-casilla">Producto</div>
-                  <div className="control-group">
+                  <div className="control-group" onChange={(e) => setProductoFilter(e.target.value)}>
                     <label className="control control-radio">
                       Ninguno
-                      <input type="radio" name="producto" />
+                      <input type="radio" name="producto" value="" defaultChecked/>
                       <div className="control_indicator"></div>
                     </label>
                     <label className="control control-radio">
                       APV
-                      <input type="radio" name="producto" />
+                      <input type="radio" name="producto" value="APV" />
                       <div className="control_indicator"></div>
                     </label>
                     <label className="control control-radio">
                       Mis Metas
-                      <input type="radio" name="producto" />
+                      <input type="radio" name="producto" value="Mis Metas" />
                       <div className="control_indicator"></div>
                     </label>
                   </div>
@@ -290,30 +290,30 @@ function AdminPac() {
                 />
                 <div>
                   <div className="titulo-casilla">Día de pago</div>
-                  <div className="control-group">
+                  <div className="control-group" onChange={(e) => setFechaPagoFilter(e.target.value)}>
                     <label className="control control-radio">
                       Sin filtro
-                      <input type="radio" name="dia" />
+                      <input type="radio" name="dia" value='' defaultChecked />
                       <div className="control_indicator"></div>
                     </label>
                     <label className="control control-radio">
                       5 del mes
-                      <input type="radio" name="dia" />
+                      <input type="radio" name="dia" value='5' />
                       <div className="control_indicator"></div>
                     </label>
                     <label className="control control-radio">
                       10 del mes
-                      <input type="radio" name="dia" />
+                      <input type="radio" name="dia" value='10' />
                       <div className="control_indicator"></div>
                     </label>
                     <label className="control control-radio">
                       15 del mes
-                      <input type="radio" name="dia" />
+                      <input type="radio" name="dia" value='15' />
                       <div className="control_indicator"></div>
                     </label>
                     <label className="control control-radio">
                       20 del mes
-                      <input type="radio" name="dia" />
+                      <input type="radio" name="dia" value='20' />
                       <div className="control_indicator"></div>
                     </label>
                   </div>
