@@ -55,6 +55,8 @@ function AdminPac() {
   const iniPages = 1;
   const finPages = 50;
   const totalPages = 6958;
+  const montoTotal = 9876543;
+
   const exportSelectedData = () => {
     const selectedData = tusDatos.filter((data, index) => {
       return selectAll || selectedRows.includes(index);
@@ -191,20 +193,11 @@ function AdminPac() {
         {/* BOTON FINAL */}
         <div className='hp-25'></div>
         <div className='monto'>
-          <span className='fsp-24 fw-600 pep-20'>Montos</span>
-          <svg className='hp-25' viewBox='0 0 30 30'>
-            <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
-              d='M6.81818 2.72727C4.55884 2.72727 2.72727 4.55883 2.72727 6.81818V23.1818C2.72727 25.4412 4.55884 27.2727 6.81818 27.2727H23.1818C25.4412 27.2727 27.2727 25.4412 27.2727 23.1818V17.4545C27.2727 16.7014 27.8832 16.0909 28.6364 16.0909C29.3895 16.0909 30 16.7014 30 17.4545V23.1818C30 26.9474 26.9474 30 23.1818 30H6.81818C3.0526 30 0 26.9474 0 23.1818V6.81818C0 3.0526 3.0526 0 6.81818 0H14.1818C14.9349 0 15.5455 0.610521 15.5455 1.36364C15.5455 2.11675 14.9349 2.72727 14.1818 2.72727H6.81818Z'
-            />
-            <path
-              fill-rule='evenodd'
-              clip-rule='evenodd'
-              d='M27.2341 12.6538C27.2341 13.3973 27.8533 14 28.6171 14C29.3809 14 30.0001 13.3973 30.0001 12.6538L30.0001 0H18.383C17.6192 0 17.0001 0.602694 17.0001 1.34615C17.0001 2.08962 17.6192 2.69231 18.383 2.69231L25.7013 2.69231L5.96347 22.4302C5.43145 22.9622 5.43145 23.8248 5.96347 24.3568C6.49549 24.8888 7.35807 24.8888 7.8901 24.3568L27.2341 5.01278V12.6538Z'
-            />
-          </svg>
+          <span className='fsp-24 fw-600 pep-20'>
+            Monto total: ${montoTotal}
+          </span>
         </div>
+
         <div className='boton-exportar' onClick={exportSelectedData}>
           <span className='fsp-24 fw-600 pep-20'>Exportar selección</span>
           <svg className='hp-25' viewBox='0 0 30 30'>
