@@ -108,7 +108,7 @@
   transition: 200ms;
 }
 
-.form-container {
+/* .form-container {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--frieren);
@@ -118,9 +118,9 @@
   color: var(--nieve);
   font-size: 18px;
   box-sizing: border-box;
-}
+} */
 
-.form-data {
+/* .form-data {
   display: flex;
   margin: 0px 24px;
   padding-bottom: 10px;
@@ -130,30 +130,30 @@
   color: var(--frieren);
   font-size: 18px;
   box-sizing: border-box;
-}
-.form-row {
+} */
+/* .form-row {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   width: 100%;
-}
+} */
 
-.form-field {
+/* .form-field 203 {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -ms-flex-positive: 1;
   flex-grow: 1;
   text-wrap: nowrap;
-}
+} */
 
-.form-ancho {
+/* .form-ancho {
   min-width: 300px;
-}
+} */
 
-form {
+/* form {
   display: block;
   margin-top: 15px;
-}
+} */
 
 .filtro-input {
   font-size: 16px;
@@ -207,6 +207,7 @@ button {
 .button:hover {
   background-color: #2980b9;
 }
+/* TABLA */
 .border-table-margin {
   margin: 10px 20px 0px 20px;
   padding-bottom: 20px;
@@ -237,6 +238,9 @@ table td:last-child {
 table td {
   padding: 5px 0px;
 }
+tbody tr{
+  border-bottom: 1px solid var(--frieren);
+}
 tbody tr:hover {
   color: var(--spiderman);
   background-color: var(--felipito);
@@ -248,18 +252,22 @@ tbody tr::selection {
   background-color: var(--frieren);
   transition: 200ms;
 }
-.check-ancho {
-  width: 10px;
-  margin-left: 10px;
+tbody td {
+  color: var(--jaimico);
 }
 
-.data-item {
+/* .check-ancho {
+  width: 10px;
+  margin-left: 10px;
+} */
+
+/* .data-item {
   background-color: var(--nieve);
   color: var(--frieren);
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .boton-exportar {
   background-color: var(--white);
@@ -365,7 +373,4 @@ input + .slider {
 }
 input:checked + .slider {
   background-color: var(--frieren);
-}
-tbody td {
-  color: var(--jaimico);
 }
