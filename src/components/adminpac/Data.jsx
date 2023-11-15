@@ -36,7 +36,7 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
   };
 
   const convertirMonto = (monto) => {
-    return new Intl.NumberFormat('es-CL', {style: 'currency', currency: 'CLP'}).format(monto)
+    return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(monto)
   };
 
   return (
@@ -64,7 +64,7 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
         </thead>
         <tbody>
           {page.map((client, index) => (
-            <tr key={index}>
+            <tr key={index} className={selectedItems.includes(index) ? 'fila-seleccionada' : ''}>
               <td className='checkbox-ancho'>
                 <input
                   className='check-box'
