@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Data({ datos, selectAll, onToggleRowSelection }) {
+function Data({page, datos, selectAll, onToggleRowSelection }) {
   const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
@@ -23,11 +23,6 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
     onToggleRowSelection(index);
   };
 
-  const URL = `http://localhost:8080/filtrar?nombreCliente=Leta`;
-
-  const [data, setData] = useState([]);
-  const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
 
   // useEffect(() => {
   //     const fetchData = async () => {
@@ -39,9 +34,6 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
   //     fetchData();
   // }, [page]);
 
-  useEffect(() => {
-    axios.get(URL).then((response) => setData(response.data.content));
-  }, []);
 
   return (
     // <div>
@@ -80,7 +72,7 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
         </tr>
       </thead>
       <tbody>
-        {data.map((client) => (
+        {page.map((client) => (
           <tr>
             <td>{client[0]}</td>
             <td>{client[1]}</td>

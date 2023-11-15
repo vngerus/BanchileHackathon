@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './adminpac.css';
 import Data from '../adminpac/Data';
 import Banchile from './banchile-icon.png';
 import tusDatos from './Data.json';
 import * as XLSX from 'xlsx';
+import axios from 'axios';
 import Switch from 'react-switch';
 
 function AdminPac() {
@@ -19,6 +20,12 @@ function AdminPac() {
   const [productoFilter, setProductoFilter] = useState('APV');
   const [codigoServicioFilter, setCodigoServicioFilter] = useState('');
 
+  const [url, setUrl] = useState(`http://localhost:8080/filtrar`); //Filtro
+  const [page, setPage] = useState([]); //Filtro
+  useEffect(() => {
+    axios.get(url).then((response) => setPage(response.data.content));
+  }, [url]);
+
   const abrirFiltro = () => {
     setFiltroVisible(true);
   };
@@ -31,17 +38,26 @@ function AdminPac() {
   const [tipoProductoFilter, setTipoProductoFilter] = useState('');
 
   const filtrarDatos = () => {
-    console.log({
-      rutRunFilter,
-      nombreFilter,
-      bancoFilter,
-      numeroCuentaFilter,
-      montoFilter,
-      productoFilter,
-      codigoServicioFilter,
-      fechaPagoFilter,
-      tipoProductoFilter,
-    });
+
+    let urlAux = 'http://localhost:8080/filtrar?';
+
+    urlAux += rutRunFilter === '' ? '' : `rut=${encodeURIComponent(rutRunFilter)}&`;
+    urlAux += nombreFilter === '' ? '' : `nombreCliente=${encodeURIComponent(nombreFilter)}&`;
+
+    urlAux += productoFilter === '' ? '' : `nombreProducto=${encodeURIComponent(productoFilter)}&`; //Modificar
+    
+    urlAux += bancoFilter === '' ? '' : `nombreBanco=${encodeURIComponent(bancoFilter)}&`;
+    urlAux += numeroCuentaFilter === '' ? '' : `cuentaId=${encodeURIComponent(numeroCuentaFilter)}&`;
+
+    urlAux += montoFilter === '' ? '' : `monto=${encodeURIComponent(montoFilter)}&`; //Modificar
+
+    urlAux += codigoServicioFilter === '' ? '' : `pacId=${encodeURIComponent(codigoServicioFilter)}&`;
+    urlAux += fechaPagoFilter === '' ? '' : `dia=${encodeURIComponent(fechaPagoFilter)}&`; //Modificar
+    urlAux = urlAux.slice(0, -1); //Posible eliminacion si se usa paginacion
+
+    console.log(urlAux);
+    setUrl(urlAux);
+    return;
   };
 
   const toggleRowSelection = (index) => {
@@ -106,6 +122,7 @@ function AdminPac() {
               <div className='fsp-18'>
                 {iniPages}-{finPages} de {totalPages}
               </div>
+
               <div id='prev-page' className='boton'>
                 <svg className='wp-15' viewBox='0 0 19 35'>
                   <path
@@ -115,7 +132,7 @@ function AdminPac() {
                   />
                 </svg>
               </div>
-              <div id='prev-page' className='boton'>
+              <div id='next-page' className='boton'>
                 <svg className='wp-15 ro-180' viewBox='0 0 19 35'>
                   <path
                     fill-rule='evenodd'
@@ -220,6 +237,7 @@ function AdminPac() {
           </div> */}
 
           <Data
+            page={page}
             datos={tusDatos}
             selectAll={selectAll}
             onToggleRowSelection={toggleRowSelection}
