@@ -5,7 +5,7 @@ function Data({ datos, selectAll }) {
 
   useEffect(() => {
     if (selectAll) {
-      setSelectedItems(datos.map((item, index) => index));
+      setSelectedItems(datos.map((_, index) => index));
     } else {
       setSelectedItems([]);
     }
@@ -32,13 +32,12 @@ function Data({ datos, selectAll }) {
               checked={selectAll || selectedItems.includes(index)}
               onChange={() => toggleItemSelection(index)}
             />
-            <div className='form-field'>{item['RUT/RUN']}</div>
-            <div className='form-field'>{item['Nombre']}</div>
-            <div className='form-field'>{item['Banco']}</div>
-            <div className='form-field'>{item['N° Cuenta']}</div>
-            <div className='form-field'>{item['Monto ($)']}</div>
-            <div className='form-field'>{item['Producto']}</div>
-            <div className='form-field'>{item['Código Servicio']}</div>
+
+            {Object.keys(item).map((key, subIndex) => (
+              <div key={subIndex} className='form-field'>
+                {item[key]}
+              </div>
+            ))}
           </div>
         ))}
       </div>
