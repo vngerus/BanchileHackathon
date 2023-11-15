@@ -21,6 +21,10 @@ function Data({ datos, selectAll }) {
     });
   };
 
+  const handleCheckboxMouseDown = (event, index) => {
+    console.log(`Checkbox at index ${index} was clicked!`);
+  };
+
   return (
     <div>
       <div className='form-data'>
@@ -31,6 +35,7 @@ function Data({ datos, selectAll }) {
               type='checkbox'
               checked={selectAll || selectedItems.includes(index)}
               onChange={() => toggleItemSelection(index)}
+              onMouseDown={(event) => handleCheckboxMouseDown(event, index)}
             />
             <div className='form-field'>{item['RUT/RUN']}</div>
             <div className='form-field form-ancho'>{item['Nombre']}</div>

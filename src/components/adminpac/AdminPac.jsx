@@ -190,7 +190,7 @@ function AdminPac() {
 
         {/* BOTON FINAL */}
         <div className='hp-25'></div>
-        <div className='monto'>
+        <div className='monto' onClick={exportSelectedData}>
           <span className='fsp-24 fw-600 pep-20'>Exportar selección</span>
           <svg className='hp-25' viewBox='0 0 30 30'>
             <path
@@ -205,7 +205,7 @@ function AdminPac() {
             />
           </svg>
         </div>
-        <div className='boton-exportar'>
+        <div className='boton-exportar' onClick={exportSelectedData}>
           <span className='fsp-24 fw-600 pep-20'>Exportar selección</span>
           <svg className='hp-25' viewBox='0 0 30 30'>
             <path
