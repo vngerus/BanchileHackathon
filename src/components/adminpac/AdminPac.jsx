@@ -5,6 +5,7 @@ import Banchile from './banchile-icon.png';
 import tusDatos from './Data.json';
 import * as XLSX from 'xlsx';
 import axios from 'axios';
+import { set } from 'date-fns';
 
 function AdminPac() {
   const [filtroVisible, setFiltroVisible] = useState(false);
@@ -91,7 +92,6 @@ function AdminPac() {
   const iniPages = 1;
   const finPages = 50;
   const totalPages = 6958;
-  const montoTotal = 0;
 
   const header = ["RUT/RUN", "Nombre", "Banco", "N° Cuenta", "Monto", "Producto", "Código Servicio", "Fecha de pago"]
 
@@ -123,6 +123,15 @@ function AdminPac() {
     XLSX.utils.book_append_sheet(wb, ws, 'SelectedData');
     XLSX.writeFile(wb, 'selected_data.xlsx');
   };
+
+  const [montoTotal, setMontoTotal] = useState(0);
+
+  useEffect(() => {
+    // Calcular el monto total basado en los datos seleccionados
+    const selectedData = page.filter((data, index) => selectedRows.includes(index));
+    const calculatedTotal = selectedData.reduce((total, data) => total + parseFloat(data[4]), 0);
+    setMontoTotal(calculatedTotal);
+  }, [page, selectedRows]);
 
   return (
     <>
