@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Data({ datos, selectAll }) {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -20,6 +21,14 @@ function Data({ datos, selectAll }) {
       }
     });
   };
+
+  const URL = `http://localhost:8080/filtrar`
+  useEffect(()=> {
+    axios.get(URL)
+    .then(
+      data => console.log(data)
+    )
+  }, [])
 
   return (
     <div>
