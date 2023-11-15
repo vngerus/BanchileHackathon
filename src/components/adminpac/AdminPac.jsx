@@ -232,10 +232,10 @@ function AdminPac() {
                   value={bancoFilter}
                   onChange={(e) => setBancoFilter(e.target.value)}
                 /> */}
-                <select className="filtro-banco">
+                <select className="filtro-banco" onChange={(e) => setBancoFilter(e.target.value)}>
                   <option value="">Filtrar banco</option>
                   <option value="Santander">Santander</option>
-                  <option value="Banco Estado">Banco Estado</option>
+                  <option value="Bancoestado">Banco Estado</option>
                   <option value="BCI">BCI</option>
                   <option value="Itau">Banco Itaú</option>
                 </select>
