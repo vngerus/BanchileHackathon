@@ -7,7 +7,7 @@
 *En este contexto, solicitamos contar con una plataforma web de fácil acceso que proporcione una única vista y permita a los usuarios realizar las siguientes acciones.*
 
 
-# Nombre de Tu Proyecto
+
 
 
 
