@@ -150,7 +150,7 @@ form {
   margin-top: 15px;
 }
 
-input[type='text'] {
+.filtro-input {
   font-size: 16px;
   border: 1px solid var(--felipito);
   border-radius: 20px;
@@ -158,8 +158,28 @@ input[type='text'] {
   margin: 10px 0px;
   width: 85%;
 }
-input[type='text']:focus {
+.filtro-input:focus,
+.filtro-input:hover {
   outline-color: var(--frieren);
+  border-color: var(--frieren);
+}
+
+.filtro-selected {
+  font-size: 16px;
+  border: 1px solid var(--felipito);
+  color: var(--jaimico);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0px;
+  width: 275px;
+  cursor: pointer;
+  outline: 0;
+}
+.filtro-selected:hover,
+.filtro-selected:focus {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid var(--frieren);
 }
 
 .botones-filtro {
@@ -196,29 +216,29 @@ button {
   background-color: var(--frieren);
   color: var(--nieve);
 }
-table th:first-child{
-  border-radius:20px 0px 0px 20px!important;
+table th:first-child {
+  border-radius: 20px 0px 0px 20px !important;
   padding: 10px;
 }
-table th:last-child{
-  border-radius:0px 20px 20px 0px;
+table th:last-child {
+  border-radius: 0px 20px 20px 0px;
 }
-table td:first-child{
-  border-radius:20px 0px 0px 20px!important;
+table td:first-child {
+  border-radius: 20px 0px 0px 20px !important;
 }
-table td:last-child{
-  border-radius:0px 20px 20px 0px;
+table td:last-child {
+  border-radius: 0px 20px 20px 0px;
 }
-table td{
+table td {
   padding: 5px 0px;
 }
-tbody tr:hover{
+tbody tr:hover {
   color: var(--spiderman);
   background-color: var(--felipito);
   transition: 200ms;
-  border-radius: 0px 10px 0px 10px!important;
+  border-radius: 0px 10px 0px 10px !important;
 }
-tbody tr::selection{
+tbody tr::selection {
   color: var(--nieve);
   background-color: var(--frieren);
   transition: 200ms;
@@ -334,10 +354,13 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-input+ .slider {
+input + .slider {
   background-color: var(--lux);
   border-color: none;
 }
 input:checked + .slider {
   background-color: var(--frieren);
+}
+tbody td {
+  color: var(--jaimico);
 }
