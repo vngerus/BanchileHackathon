@@ -161,12 +161,14 @@ function AdminPac() {
                 />
               </div>
 
-              <button className='filtro-btn' onClick={filtrarDatos}>
-                Filtrar
-              </button>
-              <button className='cerrar-btn' onClick={cerrarFiltro}>
-                Cerrar
-              </button>
+              <div className='botones-filtro'>
+                <button className='filtro-btn' onClick={filtrarDatos}>
+                  Filtrar
+                </button>
+                <button className='cerrar-btn' onClick={cerrarFiltro}>
+                  Cerrar
+                </button>
+              </div>
             </div>
           )}
 
