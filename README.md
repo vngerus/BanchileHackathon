@@ -1,8 +1,46 @@
-# React + Vite
+# Administración de PAC (Pago Automático de Cuentas)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*Con el propósito de simplificar la comercialización de productos de inversión como **APV y Mis Metas**, disponibles en **Fondos Mutuos**, ofrecemos a nuestros clientes la conveniencia de registrar un **PAC**. Esto les permite invertir directamente desde su cuenta corriente en los días de su elección: **5, 10, 15 y 20 de cada mes**, con la ventaja de que las recaudaciones se realizarán de forma automática, agilizando así sus inversiones y evitando la necesidad de ingresar manualmente las transacciones mes a mes.*
 
-Currently, two official plugins are available:
+*Es importante destacar que este proyecto se ha llevado a cabo bajo el marco de una hackathon creada por **BanChile** Inversiones en colaboración con **Generation Chile**. Esta iniciativa conjunta busca ofrecer soluciones innovadoras que mejoren la experiencia financiera de nuestros clientes.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*En este contexto, solicitamos contar con una plataforma web de fácil acceso que proporcione una única vista y permita a los usuarios realizar las siguientes acciones.*
+
+
+# Nombre de Tu Proyecto
+
+[Descripción breve de tu proyecto]
+
+## Dependencias
+
+| Paquete                                | Versión   |
+| -------------------------------------- | --------- |
+| @fontsource/nunito                     | v5.0.15   |
+| @fortawesome/fontawesome-svg-core      | v6.4.2    |
+| @fortawesome/free-solid-svg-icons      | v6.4.2    |
+| @fortawesome/react-fontawesome         | v0.2.0    |
+| axios                                  | v1.6.2    |
+| bootstrap-icons                        | v1.11.1   |
+| date-fns                               | v2.30.0   |
+| react                                  | v18.2.0   |
+| react-dom                              | v18.2.0   |
+| react-router-dom                       | v6.18.0   |
+| react-scripts                          | v5.0.1    |
+| react-switch                           | v7.0.0    |
+| xlsx                                   | v0.18.5   |
+
+## Instalación
+
+1. Clona este repositorio.
+2. Instala las dependencias utilizando el siguiente comando:
+
+   ```bash
+   npm install
+
+  
+# <h3> Participantes:</h3>
+<p><a href="https://github.com/AngelSmithlgs">Angel Smith</a></p>
+<a href="https://github.com/Rosa-Enco-Perez">Rosa Enco Perez</a></p>
+<p><a href="https://github.com/Nosst-bot">Kevin Peña Salvatierra</a></p>
+<a href="https://github.com/AldoCarquin">Aldo Carquín González</a></p>
+<a href="https://github.com/SrMule">Eduardo García</a></p>
