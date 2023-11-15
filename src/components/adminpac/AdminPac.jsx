@@ -236,13 +236,6 @@ function AdminPac() {
                   value={montoMaxFilter}
                   onChange={(e) => setMontoMaxFilter(e.target.value)}
                 />
-                <input
-                  type='text'
-                  className='filtro-selected'
-                  placeholder='Código Servicio'
-                  value={codigoServicioFilter}
-                  onChange={(e) => setCodigoServicioFilter(e.target.value)}
-                />
                 <div className='f-nunito'>
                   <div className='titulo-casilla'>Producto</div>
                   <div className="control-group">
@@ -263,6 +256,13 @@ function AdminPac() {
                     </label>
                   </div>
                 </div>
+                <input
+                  type='text'
+                  className='filtro-selected'
+                  placeholder='Código Servicio'
+                  value={codigoServicioFilter}
+                  onChange={(e) => setCodigoServicioFilter(e.target.value)}
+                />
                 <div>
                   <div className='titulo-casilla'>Día de pago</div>
                   <div className="control-group">
