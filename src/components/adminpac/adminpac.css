@@ -1,6 +1,5 @@
 /* GENERALES */
 .admin-pac-container {
-  color: var(--frieren);
   text-align: center;
   max-width: 1500px;
   margin: auto auto;
@@ -383,19 +382,24 @@ tbody tr{
   border-bottom: 1px solid var(--frieren);
 }
 tbody tr:hover {
-  color: var(--spiderman);
+  color: var(--spiderman); 
   background-color: var(--felipito);
   transition: 200ms;
   border-radius: 0px 10px 0px 10px !important;
 }
-tbody tr::selection {
+.fila-seleccionada {
   color: var(--nieve);
-  background-color: var(--frieren);
+  background-color: var(--helga);
   transition: 200ms;
 }
-tbody td {
-  color: var(--jaimico);
+.fila-seleccionada:hover {
+  color: var(--nieve);
+  background-color: var(--spiderman);
+  transition: 200ms;
 }
+/* tbody td {
+  color: var(--jaimico);
+} */
 
 /* .check-ancho {
   width: 10px;
@@ -460,15 +464,15 @@ tbody td {
 }
 
 /* DATOS FOOM SWITCH */
-.switch {
+/* .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-}
+} */
 
 /* Estilo del slider */
-.slider {
+/* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -514,4 +518,4 @@ input + .slider {
 }
 input:checked + .slider {
   background-color: var(--frieren);
-}
+} */
