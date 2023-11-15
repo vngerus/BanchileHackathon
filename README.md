@@ -9,7 +9,7 @@
 
 # Nombre de Tu Proyecto
 
-[Descripción breve de tu proyecto]
+
 
 ## Dependencias
 
