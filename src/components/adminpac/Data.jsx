@@ -23,13 +23,11 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
     onToggleRowSelection(index);
   };
 
-  const URL = `http://localhost:8080/filtrar`
-  useEffect(()=> {
-    axios.get(URL)
-    .then(
-      data => console.log(data)
-    )
-  }, [])
+  const URL = `http://localhost:8080/filtrar`;
+
+  useEffect(() => {
+    axios.get(URL).then((data) => console.log(data));
+  }, []);
 
   return (
     <div>
@@ -42,13 +40,21 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
               checked={selectAll || selectedItems.includes(index)}
               onChange={() => toggleItemSelection(index)}
             />
-            <div className='form-field'>{item['RUT/RUN']}</div>
-            <div className='form-field form-ancho'>{item['Nombre']}</div>
-            <div className='form-field form-ancho'>{item['Banco']}</div>
-            <div className='form-field'>{item['N° Cuenta']}</div>
-            <div className='form-field'>{item['Monto ($)']}</div>
-            <div className='form-field'>{item['Producto']}</div>
-            <div className='form-field'>{item['Código Servicio']}</div>
+            <table className='table'>
+              <tbody>
+                <thead>
+                  <tr>
+                    <th className='form-field'>{item['RUT/RUN']}</th>
+                    <th className='form-field form-ancho'>{item['Nombre']}</th>
+                    <th className='form-field form-ancho'>{item['Banco']}</th>
+                    <th className='form-field'>{item['N° Cuenta']}</th>
+                    <th className='form-field'>{item['Monto ($)']}</th>
+                    <th className='form-field'>{item['Producto']}</th>
+                    <th className='form-field'>{item['Código Servicio']}</th>
+                  </tr>
+                </thead>
+              </tbody>
+            </table>
           </div>
         ))}
       </div>
