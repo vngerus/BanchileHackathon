@@ -16,7 +16,8 @@ function AdminPac() {
   const [nombreFilter, setNombreFilter] = useState('');
   const [bancoFilter, setBancoFilter] = useState('');
   const [numeroCuentaFilter, setNumeroCuentaFilter] = useState('');
-  const [montoFilter, setMontoFilter] = useState('');
+  const [montoMinFilter, setMontoMinFilter] = useState('');
+  const [montoMaxFilter, setMontoMaxFilter] = useState('');
   const [productoFilter, setProductoFilter] = useState('APV');
   const [codigoServicioFilter, setCodigoServicioFilter] = useState('');
 
@@ -111,13 +112,13 @@ function AdminPac() {
           return selectedRows.includes(index);
         }
       });
-  
+
     const wsData = [header]; // Agregamos el encabezado como primera fila
     selectedData.forEach((data) => {
       const rowData = header.map((headerName) => data[header.indexOf(headerName)]);
       wsData.push(rowData);
     });
-  
+
     const ws = XLSX.utils.aoa_to_sheet(wsData);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'SelectedData');
@@ -182,38 +183,108 @@ function AdminPac() {
 
           {filtroVisible && (
             <div className='filtro-popup'>
-              <div>
+              <div className='psp-20 pep-20'>
                 <input
                   type='text'
+                  className='filtro-selected'
                   placeholder='RUT/RUN'
                   value={rutRunFilter}
                   onChange={(e) => setRutRunFilter(e.target.value)}
                 />
                 <input
                   type='text'
+                  className='filtro-selected'
                   placeholder='Nombre'
                   value={nombreFilter}
                   onChange={(e) => setNombreFilter(e.target.value)}
                 />
                 <input
                   type='text'
+                  className='filtro-selected'
                   placeholder='Banco'
                   value={bancoFilter}
                   onChange={(e) => setBancoFilter(e.target.value)}
                 />
                 <input
                   type='text'
+                  className='filtro-selected'
                   placeholder='N° Cuenta'
                   value={numeroCuentaFilter}
                   onChange={(e) => setNumeroCuentaFilter(e.target.value)}
                 />
                 <input
                   type='text'
+                  className='filtro-selected'
+                  placeholder='$ Monto minimo'
+                  value={montoMinFilter}
+                  onChange={(e) => setMontoMinFilter(e.target.value)}
+                />
+                <input
+                  type='text'
+                  className='filtro-selected'
+                  placeholder='$ Monto máximo'
+                  value={montoMaxFilter}
+                  onChange={(e) => setMontoMaxFilter(e.target.value)}
+                />
+                <input
+                  type='text'
+                  className='filtro-selected'
                   placeholder='Código Servicio'
                   value={codigoServicioFilter}
                   onChange={(e) => setCodigoServicioFilter(e.target.value)}
                 />
-                <div
+                <div className='f-nunito'>
+                  <div className='producto-filtro'>Producto</div>
+                  <div class="control-group">
+                    <label class="control control-radio">
+                      Ninguno
+                      <input type="radio" name="producto" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      APV
+                      <input type="radio" name="producto" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      Mis Metas
+                      <input type="radio" name="producto" />
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <div className='producto-filtro'>Día de pago</div>
+                  <div class="control-group">
+                    <label class="control control-radio">
+                      Sin filtro
+                      <input type="radio" name="dia" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      5 del mes
+                      <input type="radio" name="dia" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      10 del mes
+                      <input type="radio" name="dia" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      15 del mes
+                      <input type="radio" name="dia" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      20 del mes
+                      <input type="radio" name="dia" />
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+
+                {/* <div
                   className='form-field product-toggle'
                   style={{
                     display: 'flex',
@@ -234,14 +305,7 @@ function AdminPac() {
                     <span className='slider round'></span>
                   </label>
                   <span style={{ marginLeft: '10px' }}>Mis Metas</span>
-                </div>
-
-                <input
-                  type='text'
-                  placeholder='Monto ($)'
-                  value={montoFilter}
-                  onChange={(e) => setMontoFilter(e.target.value)}
-                />
+                </div> */}
               </div>
 
               <div className='botones-filtro'>
