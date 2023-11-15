@@ -148,6 +148,12 @@ function AdminPac() {
           {/* Pasa los datos al componente Data y el estado de selectAll */}
           <Data datos={tusDatos} selectAll={selectAll} />
         </div>
+
+        {/* BOTON FINAL */}
+        <div className='hp-25'></div>
+        <div className='boton-exportar'>
+          <span className='fsp-36 fw-600'>Exportar selección</span>
+        </div>
       </div>
     </>
   );
