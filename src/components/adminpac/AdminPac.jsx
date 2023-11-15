@@ -54,9 +54,7 @@ function AdminPac() {
     });
   };
 
-  const toggleSelectAll = () => {
-    setSelectAll((prev) => !prev);
-  };
+
 
   const iniPages = 1;
   const finPages = 50;

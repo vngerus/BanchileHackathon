@@ -27,6 +27,7 @@
   box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 4px 4px 55px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 .header-table {
@@ -91,14 +92,15 @@
 
 .filtro-popup {
   position: absolute;
-  top: 172px;
-  left: 62px;
+  top: 90px;
+  left: 20px;
   width: 300px;
   background-color: var(--nieve);
-  border-radius: 20px;
+  border-radius: 19px;
   box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  transition: 200ms;
 }
 
 .form-container {
@@ -195,17 +197,17 @@ button {
   color: var(--nieve);
 }
 table th:first-child{
-  border-radius:10px 0px 0px 10px!important;
+  border-radius:20px 0px 0px 20px!important;
   padding: 10px;
 }
 table th:last-child{
-  border-radius:0px 10px 10px 0px;
+  border-radius:0px 20px 20px 0px;
 }
 table td:first-child{
-  border-radius:10px 0px 0px 10px!important;
+  border-radius:20px 0px 0px 20px!important;
 }
 table td:last-child{
-  border-radius:0px 10px 10px 0px;
+  border-radius:0px 20px 20px 0px;
 }
 table td{
   padding: 5px 0px;
@@ -269,7 +271,7 @@ tbody tr::selection{
   border-width: 2px;
   margin-top: 25px;
   max-width: 1500px;
-  height: 50px;
+  height: 25px;
   margin: auto auto;
   margin-bottom: 25px;
   border-radius: 20px;
@@ -330,4 +332,12 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+input+ .slider {
+  background-color: var(--lux);
+  border-color: none;
+}
+input:checked + .slider {
+  background-color: var(--frieren);
 }
