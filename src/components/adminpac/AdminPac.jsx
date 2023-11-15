@@ -145,7 +145,6 @@ function AdminPac() {
             <div className='form-field'>Código Servicio</div>
           </div>
 
-          {/* Pasa los datos al componente Data y el estado de selectAll */}
           <Data datos={tusDatos} selectAll={selectAll} />
         </div>
 
