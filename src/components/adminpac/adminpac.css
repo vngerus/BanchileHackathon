@@ -100,6 +100,7 @@
   top: 90px;
   left: 20px;
   width: 340px;
+  padding: 20px 0px;
   background-color: var(--nieve);
   border-radius: 19px;
   box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
@@ -180,6 +181,17 @@
   cursor: pointer;
   outline: 0;
 }
+.filtro-banco {
+  font-size: 16px;
+  border: 1px solid var(--felipito);
+  color: var(--jaimico);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0px;
+  width: 295px;
+  cursor: pointer;
+  outline: 0;
+}
 .filtro-selected:hover,
 .filtro-selected:focus {
   background-color: #ffffff;
@@ -213,7 +225,11 @@ button {
   padding-left: 20px;
 }
 .titulo-casilla{
-  
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 10px 10px 0px;
+  color: var(--comadreja);
 }
 .control {
   color: var(--spiderman);

@@ -198,13 +198,20 @@ function AdminPac() {
                   value={nombreFilter}
                   onChange={(e) => setNombreFilter(e.target.value)}
                 />
-                <input
+{/*                 <input
                   type='text'
                   className='filtro-selected'
                   placeholder='Banco'
                   value={bancoFilter}
                   onChange={(e) => setBancoFilter(e.target.value)}
-                />
+                /> */}
+                 <select className='filtro-banco'>
+                  <option value=''>Filtrar banco</option>
+                  <option value='Santander'>Santander</option>
+                  <option value='Banco Estado'>Banco Estado</option>
+                  <option value='BCI'>BCI</option>
+                  <option value='Banco Itaú'>Banco Itaú</option>
+                </select>
                 <input
                   type='text'
                   className='filtro-selected'
