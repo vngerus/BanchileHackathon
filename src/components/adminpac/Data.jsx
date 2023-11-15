@@ -81,7 +81,7 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
               <td>{client[5]}</td>
               <td>{client[6]}</td>
               <td>
-                {format(parseISO(client[7]), 'dd/MMMM/yyyy', { locale: es })}
+                {format(parseISO(client[7]), 'dd/MM/yyyy', { locale: es })}
               </td>
             </tr>
           ))}
