@@ -27,17 +27,18 @@ function Data({ datos, selectAll }) {
         {datos.map((item, index) => (
           <div key={index} className='form-row'>
             <input
+              className='check-box'
               type='checkbox'
-              style={{ marginRight: '10px' }}
               checked={selectAll || selectedItems.includes(index)}
               onChange={() => toggleItemSelection(index)}
             />
-
-            {Object.keys(item).map((key, subIndex) => (
-              <div key={subIndex} className='form-field'>
-                {item[key]}
-              </div>
-            ))}
+            <div className='form-field'>{item['RUT/RUN']}</div>
+            <div className='form-field form-ancho'>{item['Nombre']}</div>
+            <div className='form-field form-ancho'>{item['Banco']}</div>
+            <div className='form-field'>{item['N° Cuenta']}</div>
+            <div className='form-field'>{item['Monto ($)']}</div>
+            <div className='form-field'>{item['Producto']}</div>
+            <div className='form-field'>{item['Código Servicio']}</div>
           </div>
         ))}
       </div>
