@@ -44,7 +44,7 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
       <table className='table'>
         <thead className='table-header'>
           <tr>
-            <th className='check-ancho'>
+            <th className=''>
               <input
                 className='check-box'
                 type='checkbox'
@@ -52,20 +52,20 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
                 onChange={handleSelectAll}
               />
             </th>
-            <th scope='col'>RUT/RUN</th>
-            <th scope='col'>Nombre</th>
-            <th scope='col'>Banco</th>
-            <th scope='col'>N° cuenta</th>
-            <th scope='col'>Monto</th>
-            <th scope='col'>Producto</th>
-            <th scope='col'>Código Servicio</th>
-            <th scope='col'>Fecha de Pago</th>
+            <th>RUT/RUN</th>
+            <th>Nombre</th>
+            <th>Banco</th>
+            <th>N° cuenta</th>
+            <th>Monto</th>
+            <th>Producto</th>
+            <th>Código Servicio</th>
+            <th>Fecha de Pago</th>
           </tr>
         </thead>
         <tbody>
           {page.map((client, index) => (
             <tr key={index} className={selectedItems.includes(index) ? 'fila-seleccionada' : ''}>
-              <td className='checkbox-ancho'>
+              <td className=''>
                 <input
                   className='check-box'
                   type='checkbox'

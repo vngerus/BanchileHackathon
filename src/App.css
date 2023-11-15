@@ -24,3 +24,29 @@ body {
     border-radius: 10px;
     border: 3px solid #ffffff;
   }
+
+  /* HELPERS */
+  .wp-15 {
+    width: 15px;
+  }
+  .hp-20 {
+    height: 20px;
+  }
+  .hp-25 {
+    height: 25px;
+  }
+  .hp-30 {
+    height: 30px;
+  }
+  .hp-70 {
+    height: 70px;
+  }
+  .psp-10{
+    padding-left: 10px;
+  }
+  .pep-20 {
+    padding-right: 20px;
+  }
+  .ro-180 {
+    transform: rotate(180deg);
+  }
