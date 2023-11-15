@@ -33,8 +33,8 @@ function Data({ datos, selectAll }) {
               onChange={() => toggleItemSelection(index)}
             />
             <div className='form-field'>{item['RUT/RUN']}</div>
-            <div className='form-field'>{item['Nombre']}</div>
-            <div className='form-field'>{item['Banco']}</div>
+            <div className='form-field form-ancho'>{item['Nombre']}</div>
+            <div className='form-field form-ancho'>{item['Banco']}</div>
             <div className='form-field'>{item['N° Cuenta']}</div>
             <div className='form-field'>{item['Monto ($)']}</div>
             <div className='form-field'>{item['Producto']}</div>

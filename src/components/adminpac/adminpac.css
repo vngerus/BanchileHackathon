@@ -12,9 +12,9 @@
   justify-content: center;
   align-items: center;
   color: var(--nieve);
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px;
-  font-size: 36px;
+  font-size: 24px;
   box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
@@ -32,16 +32,23 @@
 .header-table {
   display: flex;
   padding-top: 20px;
-  margin: 20px 20px;
+  margin: 0px 20px;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+}
+.banchile {
+  position: absolute;
+  transform: translate(-50%,50%);
+  top: 0%;
+  left: 50%;
 }
 
 .filtro {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 12px;
+  padding: 0px 20px;
   border-radius: 20px;
   transition: 200ms;
   color: var(--frieren);
@@ -99,7 +106,7 @@
   background-color: var(--frieren);
   border-radius: 10px;
   padding: 15px 0px;
-  margin: 20px 20px;
+  margin: 5px 20px;
   color: var(--nieve);
   font-size: 18px;
   box-sizing: border-box;
@@ -127,8 +134,15 @@
 }
 
 .form-field {
-  flex: 1;
-  margin-right: 10px;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-wrap: nowrap;
+}
+
+.form-ancho {
+  min-width: 300px;
 }
 
 form {
