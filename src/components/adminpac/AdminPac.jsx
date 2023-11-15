@@ -27,10 +27,19 @@ function AdminPac() {
   const [maxPages, setMaxPages] = useState(0);
   const [actualPage, setActualPage] = useState(0);
 
+  const [iniPages, setIniPages] = useState(1);
+  const [finPages, setFinPages] = useState(50);
+  const [totalDatos, setTotalDatos] = useState(0); // nuevo estado
+
   useEffect(() => {
     axios.get(url, { params: { page: actualPage } }).then((response) => {
       setPage(response.data.content);
       setMaxPages(response.data.totalPages);
+
+      setTotalDatos(response.data.totalElements);
+      setIniPages(actualPage * 20 + 1);
+      setFinPages(Math.min((actualPage + 1) * 20, response.data.totalElements));
+
     });
   }, [url, actualPage]);
   
@@ -114,11 +123,6 @@ function AdminPac() {
   const toggleSelectAll = () => {
     setSelectAll((prev) => !prev);
   };
-
-  const iniPages = 1;
-  const finPages = 50;
-  const totalPages = 6958;
-
   const header = [
     'RUT/RUN',
     'Nombre',
@@ -204,7 +208,7 @@ function AdminPac() {
 
             <div className="pages">
               <div className="fsp-18">
-                {iniPages}-{finPages} de {totalPages}
+                {iniPages}-{finPages} de {totalDatos}
               </div>
               <div id="prev-page1" className="boton" onClick={Izq}>
                 <svg className="wp-15" viewBox="0 0 19 35">
