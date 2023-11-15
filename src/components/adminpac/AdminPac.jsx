@@ -91,16 +91,16 @@ function AdminPac() {
   const iniPages = 1;
   const finPages = 50;
   const totalPages = 6958;
-  const montoTotal = 9876543;
+  const montoTotal = 0;
 
   const exportSelectedData = () => {
-    const selectedData = tusDatos.filter((data, index) => {
+    const selectedData = page.filter((data, index) => {
       return (
         (selectAll || selectedRows.includes(index)) &&
-        (!rutRunFilter || data.rutRun.includes(rutRunFilter)) &&
-        (!nombreFilter || data.nombre.includes(nombreFilter)) &&
-        (!fechaPagoFilter || data.fechaPago.includes(fechaPagoFilter)) &&
-        (!tipoProductoFilter || data.tipoProducto === tipoProductoFilter)
+        (!rutRunFilter || data[0].includes(rutRunFilter)) &&
+        (!nombreFilter || data[1].includes(nombreFilter)) &&
+        (!fechaPagoFilter || data[7].includes(fechaPagoFilter)) &&
+        (!tipoProductoFilter || data[5] === tipoProductoFilter)
       );
     });
 
