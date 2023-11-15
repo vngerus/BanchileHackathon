@@ -50,7 +50,7 @@ function AdminPac() {
         <div className='blue-rectangle'>Administrador PAC</div>
 
         <div className='caja-blanca'>
-          <div className='header-table bgc-red'>
+          <div className='header-table'>
             <a className='filtro' onClick={abrirFiltro}>
               <svg
                 className='hp-40'
@@ -61,12 +61,23 @@ function AdminPac() {
               </svg>
               <span className='fsp-24 fw-600 psp-10'>Filtrar</span>
             </a>
+
             <img src={Banchile} className='hp-70' />
-            <div className='pages wp-200 hp-50 bgc-blue'>
-              <span className=''>
+
+            <div className='pages'>
+              <div className='fsp-18'>
                 {iniPages}-{finPages} de {totalPages}
-              </span>
-              <div id='prev-page' className='boton'></div>
+              </div>
+              <div id='prev-page' className='boton'>
+                <svg className='wp-15' viewBox="0 0 19 35">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4435 0.569514C19.1855 1.32887 19.1855 2.56002 18.4435 3.31937L4.58701 17.5L18.4435 31.6806C19.1855 32.44 19.1855 33.6711 18.4435 34.4305C17.7015 35.1898 16.4985 35.1898 15.7565 34.4305L0.556499 18.8749C-0.185498 18.1156 -0.185498 16.8844 0.556499 16.1251L15.7565 0.569515C16.4985 -0.189838 17.7015 -0.189838 18.4435 0.569514Z"/>
+                </svg>
+              </div>
+              <div id='prev-page' className='boton'>
+                <svg className='wp-15 ro-180' viewBox="0 0 19 35">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4435 0.569514C19.1855 1.32887 19.1855 2.56002 18.4435 3.31937L4.58701 17.5L18.4435 31.6806C19.1855 32.44 19.1855 33.6711 18.4435 34.4305C17.7015 35.1898 16.4985 35.1898 15.7565 34.4305L0.556499 18.8749C-0.185498 18.1156 -0.185498 16.8844 0.556499 16.1251L15.7565 0.569515C16.4985 -0.189838 17.7015 -0.189838 18.4435 0.569514Z"/>
+                </svg>
+              </div>
             </div>
           </div>
 
@@ -126,7 +137,6 @@ function AdminPac() {
             </div>
           )}
 
-          <div className='search-container'></div>
           <div className='form-container'>
             <div className='form-row'>
               <input

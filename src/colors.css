@@ -4,6 +4,7 @@
   --spiderman: #00153a;
   --lux: #f57848;
   --nieve: #f1f1f1;
+  --felipito: #d0e3f0;
 
   /* Colores de maqueteo */
   --red: #ff0000;
@@ -41,6 +42,9 @@
 }
 .nieve {
   color: var(--nieve);
+}
+.felipito {
+  color: var(--felipito);
 }
 
 /* Color */
@@ -94,6 +98,9 @@
 .bgc-nieve {
   background-color: var(--nieve);
 }
+.bgc-felipito {
+  background-color: var(--felipito);
+}
 
 .bgc-red {
   background-color: var(--red);
@@ -144,6 +151,9 @@
 }
 .border-nieve {
   border-color: var(--nieve);
+}
+.border-felipito {
+  border-color: var(--felipito);
 }
 
 .border-red {
