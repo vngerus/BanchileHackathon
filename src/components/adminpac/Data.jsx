@@ -52,14 +52,14 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
                 onChange={handleSelectAll}
               />
             </th>
-            <th scope='col'>RUT</th>
+            <th scope='col'>RUT/RUN</th>
             <th scope='col'>Nombre</th>
             <th scope='col'>Banco</th>
-            <th scope='col'>N cuenta</th>
+            <th scope='col'>N° cuenta</th>
             <th scope='col'>Monto</th>
             <th scope='col'>Producto</th>
-            <th scope='col'>Codigo Servicio</th>
-            <th scope='col'>Fecha</th>
+            <th scope='col'>Código Servicio</th>
+            <th scope='col'>Fecha de Pago</th>
           </tr>
         </thead>
         <tbody>
