@@ -234,7 +234,7 @@ function AdminPac() {
                   onChange={(e) => setCodigoServicioFilter(e.target.value)}
                 />
                 <div className='f-nunito'>
-                  <div className='producto-filtro'>Producto</div>
+                  <div className='titulo-casilla'>Producto</div>
                   <div class="control-group">
                     <label class="control control-radio">
                       Ninguno
@@ -254,7 +254,7 @@ function AdminPac() {
                   </div>
                 </div>
                 <div>
-                  <div className='producto-filtro'>Día de pago</div>
+                  <div className='titulo-casilla'>Día de pago</div>
                   <div class="control-group">
                     <label class="control control-radio">
                       Sin filtro
