@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { format, parseISO } from 'date-fns';
+import es from 'date-fns/locale/es';
 
 function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -31,6 +33,10 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
       onSelectAll(true);
       setSelectedItems(datos.map((_, index) => index));
     }
+  };
+
+  const convertirMonto = (monto) => {
+    return new Intl.NumberFormat('es-CL', {style: 'currency', currency: 'CLP'}).format(monto)
   };
 
   return (
@@ -71,10 +77,12 @@ function Data({ page, datos, selectAll, onSelectAll, onToggleRowSelection }) {
               <td>{client[1]}</td>
               <td>{client[2]}</td>
               <td>{client[3]}</td>
-              <td>{client[4]}</td>
+              <td>{convertirMonto(client[4])}</td>
               <td>{client[5]}</td>
               <td>{client[6]}</td>
-              <td>{client[7]}</td>
+              <td>
+                {format(parseISO(client[7]), 'dd/MMMM/yyyy', { locale: es })}
+              </td>
             </tr>
           ))}
         </tbody>
