@@ -1,0 +1,452 @@
+[
+  {
+    "RUT/RUN": "3234145-6",
+    "Nombre": "Verge",
+    "Banco": "Rhyloo",
+    "N° Cuenta": "916767884",
+    "Monto ($)": 964373,
+    "Producto": "Itaú-Corpbanca",
+    "Código Servicio": 492010
+  },
+  {
+    "RUT/RUN": "5096048-9",
+    "Nombre": "Ferd",
+    "Banco": "Edgeify",
+    "N° Cuenta": "566208585",
+    "Monto ($)": 2978639,
+    "Producto": "Scotiabank Chile",
+    "Código Servicio": 723964
+  },
+  {
+    "RUT/RUN": "19529198-8",
+    "Nombre": "Jonah",
+    "Banco": "Skynoodle",
+    "N° Cuenta": "991447574",
+    "Monto ($)": 983616,
+    "Producto": "Scotiabank Chile",
+    "Código Servicio": 356932
+  },
+  {
+    "RUT/RUN": "6978510-6",
+    "Nombre": "Thatch",
+    "Banco": "Mynte",
+    "N° Cuenta": "249188649",
+    "Monto ($)": 1133975,
+    "Producto": "Banco Ripley",
+    "Código Servicio": 235153
+  },
+  {
+    "RUT/RUN": "17040123-2",
+    "Nombre": "Loydie",
+    "Banco": "Kanoodle",
+    "N° Cuenta": "650189832",
+    "Monto ($)": 2581590,
+    "Producto": "Banco Consorcio",
+    "Código Servicio": 440287
+  },
+  {
+    "RUT/RUN": "24415564-4",
+    "Nombre": "Gradeigh",
+    "Banco": "Quimm",
+    "N° Cuenta": "272996723",
+    "Monto ($)": 2691172,
+    "Producto": "Banco Consorcio",
+    "Código Servicio": 404278
+  },
+  {
+    "RUT/RUN": "4087095-3",
+    "Nombre": "Grazia",
+    "Banco": "Eadel",
+    "N° Cuenta": "397793224",
+    "Monto ($)": 1124147,
+    "Producto": "Banco Bice",
+    "Código Servicio": 299977
+  },
+  {
+    "RUT/RUN": "8677050-2",
+    "Nombre": "Eadith",
+    "Banco": "Camimbo",
+    "N° Cuenta": "199851380",
+    "Monto ($)": 1264377,
+    "Producto": "Banco de Crédito e Inversiones",
+    "Código Servicio": 222630
+  },
+  {
+    "RUT/RUN": "10813850-4",
+    "Nombre": "Keane",
+    "Banco": "Buzzster",
+    "N° Cuenta": "229180563",
+    "Monto ($)": 1259493,
+    "Producto": "Chile (BBVA)",
+    "Código Servicio": 935935
+  },
+  {
+    "RUT/RUN": "3437049-6",
+    "Nombre": "Alanah",
+    "Banco": "Realblab",
+    "N° Cuenta": "474515171",
+    "Monto ($)": 2480551,
+    "Producto": "Banco Internacional",
+    "Código Servicio": 398401
+  },
+  {
+    "RUT/RUN": "25175049-2",
+    "Nombre": "Dana",
+    "Banco": "Gigabox",
+    "N° Cuenta": "239553738",
+    "Monto ($)": 1288412,
+    "Producto": "Otro Banco",
+    "Código Servicio": 620440
+  },
+  {
+    "RUT/RUN": "18666768-4",
+    "Nombre": "Boris",
+    "Banco": "Cogibox",
+    "N° Cuenta": "396003104",
+    "Monto ($)": 2499842,
+    "Producto": "Banco Internacional",
+    "Código Servicio": 589696
+  },
+  {
+    "RUT/RUN": "14831965-1",
+    "Nombre": "Warren",
+    "Banco": "Skiptube",
+    "N° Cuenta": "264241123",
+    "Monto ($)": 391071,
+    "Producto": "Banco Consorcio",
+    "Código Servicio": 656373
+  },
+  {
+    "RUT/RUN": "16488788-2",
+    "Nombre": "Gerhardt",
+    "Banco": "Zazio",
+    "N° Cuenta": "206725137",
+    "Monto ($)": 2937301,
+    "Producto": "HSBC Bank (Chile)",
+    "Código Servicio": 370058
+  },
+  {
+    "RUT/RUN": "8777791-2",
+    "Nombre": "Moina",
+    "Banco": "Meevee",
+    "N° Cuenta": "902018483",
+    "Monto ($)": 1507508,
+    "Producto": "Banco de Crédito e Inversiones",
+    "Código Servicio": 533690
+  },
+  {
+    "RUT/RUN": "15888100-3",
+    "Nombre": "Ignazio",
+    "Banco": "Ntag",
+    "N° Cuenta": "593176929",
+    "Monto ($)": 939259,
+    "Producto": "Banco Consorcio",
+    "Código Servicio": 333640
+  },
+  {
+    "RUT/RUN": "7332149-9",
+    "Nombre": "Talyah",
+    "Banco": "Livetube",
+    "N° Cuenta": "843247947",
+    "Monto ($)": 182557,
+    "Producto": "Banco Santander-Chile",
+    "Código Servicio": 113671
+  },
+  {
+    "RUT/RUN": "16890261-1",
+    "Nombre": "Koo",
+    "Banco": "Gevee",
+    "N° Cuenta": "140588914",
+    "Monto ($)": 871025,
+    "Producto": "Banco Security",
+    "Código Servicio": 162081
+  },
+  {
+    "RUT/RUN": "6020593-9",
+    "Nombre": "Bridie",
+    "Banco": "Meedoo",
+    "N° Cuenta": "363364265",
+    "Monto ($)": 197754,
+    "Producto": "Banco Ripley",
+    "Código Servicio": 382810
+  },
+  {
+    "RUT/RUN": "18135147-4",
+    "Nombre": "Hanni",
+    "Banco": "Avaveo",
+    "N° Cuenta": "487389806",
+    "Monto ($)": 1631613,
+    "Producto": "Banco Security",
+    "Código Servicio": 574566
+  },
+  {
+    "RUT/RUN": "8843216-2",
+    "Nombre": "Jenilee",
+    "Banco": "Thoughtworks",
+    "N° Cuenta": "359023337",
+    "Monto ($)": 1760934,
+    "Producto": "Banco Bilbao Vizcaya Argentaria",
+    "Código Servicio": 779236
+  },
+  {
+    "RUT/RUN": "14328364-k",
+    "Nombre": "Oswald",
+    "Banco": "Rhybox",
+    "N° Cuenta": "432135192",
+    "Monto ($)": 1483097,
+    "Producto": "Banco Bilbao Vizcaya Argentaria",
+    "Código Servicio": 852230
+  },
+  {
+    "RUT/RUN": "14767192-7",
+    "Nombre": "Rodolphe",
+    "Banco": "Meetz",
+    "N° Cuenta": "450647428",
+    "Monto ($)": 2283867,
+    "Producto": "Scotiabank Chile",
+    "Código Servicio": 258115
+  },
+  {
+    "RUT/RUN": "1368331-2",
+    "Nombre": "Kelwin",
+    "Banco": "Tagopia",
+    "N° Cuenta": "613485477",
+    "Monto ($)": 879554,
+    "Producto": "Banco de Crédito e Inversiones",
+    "Código Servicio": 931057
+  },
+  {
+    "RUT/RUN": "21675800-6",
+    "Nombre": "Clementina",
+    "Banco": "Tagfeed",
+    "N° Cuenta": "251972375",
+    "Monto ($)": 2060903,
+    "Producto": "Otro Banco",
+    "Código Servicio": 775515
+  },
+  {
+    "RUT/RUN": "1693590-9",
+    "Nombre": "Siffre",
+    "Banco": "Edgepulse",
+    "N° Cuenta": "380361854",
+    "Monto ($)": 996657,
+    "Producto": "Banco Consorcio",
+    "Código Servicio": 289511
+  },
+  {
+    "RUT/RUN": "19509879-k",
+    "Nombre": "Ramonda",
+    "Banco": "Minyx",
+    "N° Cuenta": "503008447",
+    "Monto ($)": 612304,
+    "Producto": "Banco Internacional",
+    "Código Servicio": 958526
+  },
+  {
+    "RUT/RUN": "19219479-8",
+    "Nombre": "Angie",
+    "Banco": "Rhyzio",
+    "N° Cuenta": "315541468",
+    "Monto ($)": 2551584,
+    "Producto": "HSBC Bank (Chile)",
+    "Código Servicio": 758428
+  },
+  {
+    "RUT/RUN": "25781440-1",
+    "Nombre": "Laurence",
+    "Banco": "Wikibox",
+    "N° Cuenta": "224519265",
+    "Monto ($)": 2190372,
+    "Producto": "Banco Bilbao Vizcaya Argentaria",
+    "Código Servicio": 874110
+  },
+  {
+    "RUT/RUN": "18378553-1",
+    "Nombre": "Ceil",
+    "Banco": "Kimia",
+    "N° Cuenta": "111978510",
+    "Monto ($)": 56186,
+    "Producto": "Banco Bice",
+    "Código Servicio": 796060
+  },
+  {
+    "RUT/RUN": "19748404-8",
+    "Nombre": "Hildagard",
+    "Banco": "Digitube",
+    "N° Cuenta": "681954823",
+    "Monto ($)": 377856,
+    "Producto": "Banco Internacional",
+    "Código Servicio": 718780
+  },
+  {
+    "RUT/RUN": "14087760-7",
+    "Nombre": "Dede",
+    "Banco": "Shuffledrive",
+    "N° Cuenta": "500429030",
+    "Monto ($)": 1129078,
+    "Producto": "Banco Ripley",
+    "Código Servicio": 166934
+  },
+  {
+    "RUT/RUN": "2489738-1",
+    "Nombre": "Allard",
+    "Banco": "Tekfly",
+    "N° Cuenta": "516660330",
+    "Monto ($)": 643839,
+    "Producto": "Banco Internacional",
+    "Código Servicio": 435580
+  },
+  {
+    "RUT/RUN": "7817811-8",
+    "Nombre": "Ileane",
+    "Banco": "Lazzy",
+    "N° Cuenta": "210198171",
+    "Monto ($)": 1794,
+    "Producto": "Banco de Chile",
+    "Código Servicio": 695585
+  },
+  {
+    "RUT/RUN": "6849116-3",
+    "Nombre": "Ronnica",
+    "Banco": "Ozu",
+    "N° Cuenta": "450768233",
+    "Monto ($)": 906346,
+    "Producto": "Banco Falabella",
+    "Código Servicio": 936079
+  },
+  {
+    "RUT/RUN": "10573528-3",
+    "Nombre": "Jeddy",
+    "Banco": "Divape",
+    "N° Cuenta": "393130739",
+    "Monto ($)": 2474736,
+    "Producto": "Otro Banco",
+    "Código Servicio": 509296
+  },
+  {
+    "RUT/RUN": "19081978-k",
+    "Nombre": "Westleigh",
+    "Banco": "Babbleset",
+    "N° Cuenta": "662656848",
+    "Monto ($)": 651318,
+    "Producto": "Banco Bilbao Vizcaya Argentaria",
+    "Código Servicio": 453926
+  },
+  {
+    "RUT/RUN": "1478440-2",
+    "Nombre": "Issy",
+    "Banco": "Topicshots",
+    "N° Cuenta": "484126880",
+    "Monto ($)": 2948141,
+    "Producto": "Banco de Crédito e Inversiones",
+    "Código Servicio": 179719
+  },
+  {
+    "RUT/RUN": "9479372-5",
+    "Nombre": "Umberto",
+    "Banco": "Mita",
+    "N° Cuenta": "679474970",
+    "Monto ($)": 446042,
+    "Producto": "Banco de Chile",
+    "Código Servicio": 211265
+  },
+  {
+    "RUT/RUN": "10261078-4",
+    "Nombre": "Ashlin",
+    "Banco": "Riffpedia",
+    "N° Cuenta": "989305865",
+    "Monto ($)": 1212241,
+    "Producto": "Banco Bice",
+    "Código Servicio": 753406
+  },
+  {
+    "RUT/RUN": "12256195-3",
+    "Nombre": "Anthea",
+    "Banco": "Fatz",
+    "N° Cuenta": "933576035",
+    "Monto ($)": 2631447,
+    "Producto": "Banco Ripley",
+    "Código Servicio": 940497
+  },
+  {
+    "RUT/RUN": "9208472-2",
+    "Nombre": "Roda",
+    "Banco": "Zoozzy",
+    "N° Cuenta": "455784249",
+    "Monto ($)": 196872,
+    "Producto": "Scotiabank Chile",
+    "Código Servicio": 426404
+  },
+  {
+    "RUT/RUN": "1754534-3",
+    "Nombre": "Audrey",
+    "Banco": "Yambee",
+    "N° Cuenta": "427618001",
+    "Monto ($)": 1096946,
+    "Producto": "Banco BTG Pactual Chile",
+    "Código Servicio": 986216
+  },
+  {
+    "RUT/RUN": "25690464-8",
+    "Nombre": "Rebekah",
+    "Banco": "Quamba",
+    "N° Cuenta": "533243874",
+    "Monto ($)": 501913,
+    "Producto": "Scotiabank Chile",
+    "Código Servicio": 914103
+  },
+  {
+    "RUT/RUN": "25031239-8",
+    "Nombre": "Ervin",
+    "Banco": "Thoughtworks",
+    "N° Cuenta": "556859138",
+    "Monto ($)": 2717829,
+    "Producto": "Chile (BBVA)",
+    "Código Servicio": 195165
+  },
+  {
+    "RUT/RUN": "14734215-4",
+    "Nombre": "Olivier",
+    "Banco": "Yadel",
+    "N° Cuenta": "732949444",
+    "Monto ($)": 1460174,
+    "Producto": "Banco Consorcio",
+    "Código Servicio": 398990
+  },
+  {
+    "RUT/RUN": "24841324-1",
+    "Nombre": "Moise",
+    "Banco": "Topicblab",
+    "N° Cuenta": "493586157",
+    "Monto ($)": 840284,
+    "Producto": "Banco Santander-Chile",
+    "Código Servicio": 523339
+  },
+  {
+    "RUT/RUN": "7390461-1",
+    "Nombre": "Barb",
+    "Banco": "Pixoboo",
+    "N° Cuenta": "293158768",
+    "Monto ($)": 1662238,
+    "Producto": "Itaú-Corpbanca",
+    "Código Servicio": 179430
+  },
+  {
+    "RUT/RUN": "14138182-2",
+    "Nombre": "Mariquilla",
+    "Banco": "Cogilith",
+    "N° Cuenta": "514294464",
+    "Monto ($)": 2705024,
+    "Producto": "Banco Security",
+    "Código Servicio": 226407
+  },
+  {
+    "RUT/RUN": "18429038-7",
+    "Nombre": "Ginnifer",
+    "Banco": "Voonyx",
+    "N° Cuenta": "662420388",
+    "Monto ($)": 874979,
+    "Producto": "Banco BTG Pactual Chile",
+    "Código Servicio": 475574
+  }
+]
