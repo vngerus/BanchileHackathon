@@ -169,20 +169,28 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* ELEMENTOS BOTON FINAL */
 .boton-exportar {
   background-color: var(--nieve);
+  fill: var(--frieren);
+  color: var(--frieren);
   margin-top: 25px;
   width: 300px;
   height: 50px;
-  color: var(--spiderman);
   margin: auto auto;
+  margin-bottom: 50px;
   border-radius: 20px;
   padding: 10px 50px 10px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  transition: 200ms;
+  box-shadow: 4px 4px 25px 0px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 4px 4px 25px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 4px 4px 25px 0px rgba(0,0,0,0.25);
+}
+
+.boton-exportar:hover {
+  background-color: var(--frieren);
+  fill: var(--nieve);
+  color: var(--nieve);
 }
