@@ -190,8 +190,8 @@ function AdminPac() {
 
         {/* BOTON FINAL */}
         <div className='hp-25'></div>
-        <div className='monto' onClick={exportSelectedData}>
-          <span className='fsp-24 fw-600 pep-20'>Exportar selección</span>
+        <div className='monto'>
+          <span className='fsp-24 fw-600 pep-20'>Montos</span>
           <svg className='hp-25' viewBox='0 0 30 30'>
             <path
               fill-rule='evenodd'
