@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './adminpac.css';
 import Data from '../adminpac/Data';
-import Banchile from './banchile-icon.png';
+import Banchile from './icono.png';
 import tusDatos from './Data.json';
 import * as XLSX from 'xlsx';
 import axios from 'axios';
@@ -156,7 +156,7 @@ function AdminPac() {
             </a>
 
             <div className='banchile'>
-              <img src={Banchile} className='hp-50' />
+              <img src={Banchile} className='hp-70' />
             </div>
 
             <div className='pages'>
