@@ -434,8 +434,8 @@ function AdminPac() {
           </span>
         </div>
 
-        <div className="boton-exportar" onClick={exportSelectedData}>
-          <span className="fsp-24 fw-600 pep-20">Exportar selección</span>
+        <button className="boton-exportar" onClick={exportSelectedData} disabled>
+          <span className="fw-600 pep-20">Exportar selección</span>
           <svg className="hp-25" viewBox="0 0 30 30">
             <path
               fillRule="evenodd"
@@ -448,7 +448,7 @@ function AdminPac() {
               d="M27.2341 12.6538C27.2341 13.3973 27.8533 14 28.6171 14C29.3809 14 30.0001 13.3973 30.0001 12.6538L30.0001 0H18.383C17.6192 0 17.0001 0.602694 17.0001 1.34615C17.0001 2.08962 17.6192 2.69231 18.383 2.69231L25.7013 2.69231L5.96347 22.4302C5.43145 22.9622 5.43145 23.8248 5.96347 24.3568C6.49549 24.8888 7.35807 24.8888 7.8901 24.3568L27.2341 5.01278V12.6538Z"
             />
           </svg>
-        </div>
+        </button>
       </div>
     </>
   );

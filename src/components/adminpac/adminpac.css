@@ -355,6 +355,9 @@ tbody tr:hover {
   background-color: var(--white);
   fill: var(--frieren);
   color: var(--frieren);
+  font-size: 18px;
+  text-wrap: nowrap;
+  font-family: 'nunito';
   margin-top: 25px;
   width: 300px;
   height: 50px;
@@ -369,6 +372,20 @@ tbody tr:hover {
   box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 25px 0px rgba(0, 0, 0, 0.25);
+}
+.boton-exportar:disabled{
+  background-color: var(--nieve);
+  fill: var(--jaimico);
+  color: var(--jaimico);
+  pointer-events: none!important;
+  cursor: not-allowed!important;
+}
+.boton-exportar:hover:disabled {
+  background-color: var(--nieve);
+  fill: var(--jaimico);
+  color: var(--jaimico);
+  pointer-events: none!important;
+  cursor: not-allowed!important;
 }
 
 .boton-exportar:hover {
