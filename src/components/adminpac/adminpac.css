@@ -1,3 +1,4 @@
+/* GENERALES */
 .admin-pac-container {
   color: var(--frieren);
   text-align: center;
@@ -30,6 +31,7 @@
   position: relative;
 }
 
+/* HEADER TABLA */
 .header-table {
   display: flex;
   padding-top: 20px;
@@ -38,6 +40,7 @@
   justify-content: space-between;
   position: relative;
 }
+
 .banchile {
   position: absolute;
   transform: translate(-50%, 50%);
@@ -82,13 +85,15 @@
   align-items: center;
 }
 
-.search-container {
+/* .search-container {
   width: 5%;
   margin: 25px 0 20px 20px;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-}
+} */
+
+/* FILTRO */
 
 .filtro-popup {
   position: absolute;
