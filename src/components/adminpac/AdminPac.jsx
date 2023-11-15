@@ -4,6 +4,7 @@ import Data from '../adminpac/Data';
 import Banchile from './banchile-icon.png';
 import tusDatos from './Data.json';
 import * as XLSX from 'xlsx';
+import Switch from 'react-switch';
 
 function AdminPac() {
   const [filtroVisible, setFiltroVisible] = useState(false);
@@ -15,7 +16,7 @@ function AdminPac() {
   const [bancoFilter, setBancoFilter] = useState('');
   const [numeroCuentaFilter, setNumeroCuentaFilter] = useState('');
   const [montoFilter, setMontoFilter] = useState('');
-  const [productoFilter, setProductoFilter] = useState('');
+  const [productoFilter, setProductoFilter] = useState('APV');
   const [codigoServicioFilter, setCodigoServicioFilter] = useState('');
 
   const abrirFiltro = () => {
@@ -26,6 +27,9 @@ function AdminPac() {
     setFiltroVisible(false);
   };
 
+  const [fechaPagoFilter, setFechaPagoFilter] = useState('');
+  const [tipoProductoFilter, setTipoProductoFilter] = useState('');
+
   const filtrarDatos = () => {
     console.log({
       rutRunFilter,
@@ -35,6 +39,8 @@ function AdminPac() {
       montoFilter,
       productoFilter,
       codigoServicioFilter,
+      fechaPagoFilter,
+      tipoProductoFilter,
     });
   };
 
@@ -59,8 +65,15 @@ function AdminPac() {
 
   const exportSelectedData = () => {
     const selectedData = tusDatos.filter((data, index) => {
-      return selectAll || selectedRows.includes(index);
+      return (
+        (selectAll || selectedRows.includes(index)) &&
+        (!rutRunFilter || data.rutRun.includes(rutRunFilter)) &&
+        (!nombreFilter || data.nombre.includes(nombreFilter)) &&
+        (!fechaPagoFilter || data.fechaPago.includes(fechaPagoFilter)) &&
+        (!tipoProductoFilter || data.tipoProducto === tipoProductoFilter)
+      );
     });
+
     const ws = XLSX.utils.json_to_sheet(selectedData);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'SelectedData');
@@ -143,21 +156,38 @@ function AdminPac() {
                 />
                 <input
                   type='text'
-                  placeholder='Monto ($)'
-                  value={montoFilter}
-                  onChange={(e) => setMontoFilter(e.target.value)}
-                />
-                <input
-                  type='text'
-                  placeholder='Producto'
-                  value={productoFilter}
-                  onChange={(e) => setProductoFilter(e.target.value)}
-                />
-                <input
-                  type='text'
                   placeholder='Código Servicio'
                   value={codigoServicioFilter}
                   onChange={(e) => setCodigoServicioFilter(e.target.value)}
+                />
+                <div
+                  className='form-field product-toggle'
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <span style={{ marginRight: '10px' }}>APV</span>
+                  <label className='switch'>
+                    <input
+                      type='checkbox'
+                      onChange={() =>
+                        setProductoFilter(
+                          productoFilter === 'APV' ? 'Mis Metas' : 'APV'
+                        )
+                      }
+                    />
+                    <span className='slider round'></span>
+                  </label>
+                  <span style={{ marginLeft: '10px' }}>Mis Metas</span>
+                </div>
+
+                <input
+                  type='text'
+                  placeholder='Monto ($)'
+                  value={montoFilter}
+                  onChange={(e) => setMontoFilter(e.target.value)}
                 />
               </div>
 
