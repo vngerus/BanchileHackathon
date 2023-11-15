@@ -23,7 +23,7 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
     onToggleRowSelection(index);
   };
 
-  const URL = `http://localhost:8080/filtrar?nombreCliente=Leta`;
+  const URL = `http://localhost:8080/filtrar`;
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(0);
@@ -46,7 +46,7 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
   return (
     // <div>
     //   <div className='form-data'>
-    //     {datos.map((item, index) => (
+    //    
     //       <div key={index} className='form-row'>
     //         <input
     //           className='check-box'
@@ -65,36 +65,47 @@ function Data({ datos, selectAll, onToggleRowSelection }) {
     //     ))}
     //   </div>
     // </div>
-
-    <table className="table">
-      <thead>
-        <tr>
-          <th scope="col">RUT</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Banco</th>
-          <th scope="col">N cuenta</th>
-          <th scope="col">Monto</th>
-          <th scope="col">Producto</th>
-          <th scope="col">Codigo Servicio</th>
-          <th scope="col">Fecha</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((client) => (
+    <div className='border-table-margin'>
+      <table className="table">
+        <thead className='table-header'>
           <tr>
-            <td>{client[0]}</td>
-            <td>{client[1]}</td>
-            <td>{client[2]}</td>
-            <td>{client[3]}</td>
-            <td>{client[4]}</td>
-            <td>{client[5]}</td>
-            <td>{client[6]}</td>
-            <td>{client[7]}</td>
+            <th className='check-ancho'>
+              <input className='check-box'
+                type='checkbox'>
+              </input>
+            </th>
+            <th scope="col">RUT</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Banco</th>
+            <th scope="col">N cuenta</th>
+            <th scope="col">Monto</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Codigo Servicio</th>
+            <th scope="col">Fecha</th>
           </tr>
-        ))
-        }
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((client) => (
+            <tr>
+              <td className='checkbox-ancho'>
+                <input className='check-box'
+                  type='checkbox'>
+                </input>
+              </td>
+              <td>{client[0]}</td>
+              <td>{client[1]}</td>
+              <td>{client[2]}</td>
+              <td>{client[3]}</td>
+              <td>{client[4]}</td>
+              <td>{client[5]}</td>
+              <td>{client[6]}</td>
+              <td>{client[7]}</td>
+            </tr>
+          ))
+          }
+        </tbody>
+      </table>
+    </div>
   );
 }
 

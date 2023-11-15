@@ -113,10 +113,6 @@
   box-sizing: border-box;
 }
 
-.check-box {
-  margin: 0px 20px;
-}
-
 .form-data {
   display: flex;
   margin: 0px 24px;
@@ -184,22 +180,50 @@ button {
 .button:hover {
   background-color: #2980b9;
 }
-
+.border-table-margin {
+  margin: 10px 20px 0px 20px;
+  padding-bottom: 20px;
+}
 .table {
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--frieren);
-  background-color: var(--nieve);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  text-indent: initial;
+  border-spacing: 2px;
 }
-
-.table th,
-.table td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid var(--frieren);
+.table-header {
+  background-color: var(--frieren);
+  color: var(--nieve);
+}
+table th:first-child{
+  border-radius:10px 0px 0px 10px!important;
+  padding: 10px;
+}
+table th:last-child{
+  border-radius:0px 10px 10px 0px;
+}
+table td:first-child{
+  border-radius:10px 0px 0px 10px!important;
+}
+table td:last-child{
+  border-radius:0px 10px 10px 0px;
+}
+table td{
+  padding: 5px 0px;
+}
+tbody tr:hover{
+  color: var(--spiderman);
+  background-color: var(--felipito);
+  transition: 200ms;
+  border-radius: 0px 10px 0px 10px!important;
+}
+tbody tr::selection{
+  color: var(--nieve);
+  background-color: var(--frieren);
+  transition: 200ms;
+}
+.check-ancho {
+  width: 10px;
+  margin-left: 10px;
 }
 
 .data-item {
