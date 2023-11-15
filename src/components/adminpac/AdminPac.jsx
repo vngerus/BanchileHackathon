@@ -404,7 +404,7 @@ function AdminPac() {
           </span>
         </div>
 
-        <button className="boton-exportar" onClick={exportSelectedData} disabled>
+        <button className="boton-exportar" onClick={exportSelectedData}>
           <span className="fw-600 pep-20">Exportar selección</span>
           <svg className="hp-25" viewBox="0 0 30 30">
             <path
