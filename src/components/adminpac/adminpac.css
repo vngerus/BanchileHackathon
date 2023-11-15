@@ -204,13 +204,21 @@
   display: flex;
   justify-content: space-between;
 }
-
+.cierre{
+  position:absolute;
+  background-color: var(--red);
+  top: 7px;
+  right: 7px;
+  padding: 0%;
+  height: 20px;
+  width: 20px;
+}
 button {
   background-color: var(--frieren);
   color: var(--nieve);
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
 }

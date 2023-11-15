@@ -210,6 +210,7 @@ function AdminPac() {
 
           {filtroVisible && (
             <div className="filtro-popup">
+              <button className='cierre' onClick={cerrarFiltro}>x</button>
               <div className="psp-20 pep-20">
                 <input
                   type="text"
