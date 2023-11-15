@@ -202,7 +202,7 @@ function AdminPac() {
             </div>
           )}
 
-          <div className='form-container'>
+          {/* <div className='form-container'>
             <div className='check-box'>
               <input
                 type='checkbox'
@@ -217,7 +217,7 @@ function AdminPac() {
             <div className='form-field'>Monto ($)</div>
             <div className='form-field'>Producto</div>
             <div className='form-field'>Código Servicio</div>
-          </div>
+          </div> */}
 
           <Data
             datos={tusDatos}
