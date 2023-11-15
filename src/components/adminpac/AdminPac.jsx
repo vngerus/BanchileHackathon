@@ -93,18 +93,27 @@ function AdminPac() {
   const totalPages = 6958;
   const montoTotal = 0;
 
-  const exportSelectedData = () => {
-    const selectedData = page.filter((data, index) => {
-      return (
-        (selectAll || selectedRows.includes(index)) &&
-        (!rutRunFilter || data[0].includes(rutRunFilter)) &&
-        (!nombreFilter || data[1].includes(nombreFilter)) &&
-        (!fechaPagoFilter || data[7].includes(fechaPagoFilter)) &&
-        (!tipoProductoFilter || data[5] === tipoProductoFilter)
-      );
-    });
+  const header = ["RUT/RUN", "Nombre", "Banco", "N° Cuenta", "Monto", "Producto", "Código Servicio", "Fecha de pago"]
 
-    const ws = XLSX.utils.json_to_sheet(selectedData);
+  const exportSelectedData = () => {
+    const selectedData = page
+      .filter((data, index) => {
+        return (
+          (selectAll || selectedRows.includes(header[index])) &&
+          (!rutRunFilter || data[0].includes(rutRunFilter)) &&
+          (!nombreFilter || data[1].includes(nombreFilter)) &&
+          (!fechaPagoFilter || data[7].includes(fechaPagoFilter)) &&
+          (!tipoProductoFilter || data[5] === tipoProductoFilter)
+        );
+      });
+  
+    const wsData = [header]; // Agregamos el encabezado como primera fila
+    selectedData.forEach(data => {
+      const rowData = header.map(headerName => data[header.indexOf(headerName)]);
+      wsData.push(rowData);
+    });
+  
+    const ws = XLSX.utils.aoa_to_sheet(wsData);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'SelectedData');
     XLSX.writeFile(wb, 'selected_data.xlsx');
