@@ -237,7 +237,7 @@ tbody tr::selection{
 }
 
 .boton-exportar {
-  background-color: var(--nieve);
+  background-color: var(--white);
   fill: var(--frieren);
   color: var(--frieren);
   margin-top: 25px;
