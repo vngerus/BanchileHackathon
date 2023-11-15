@@ -187,7 +187,11 @@ function AdminPac() {
             <div className='form-field'>Código Servicio</div>
           </div>
 
-          <Data datos={tusDatos} selectAll={selectAll} />
+          <Data
+            datos={tusDatos}
+            selectAll={selectAll}
+            onToggleRowSelection={toggleRowSelection}
+          />
         </div>
 
         {/* BOTON FINAL */}
