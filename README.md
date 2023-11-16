@@ -11,7 +11,7 @@
 
 
 
-## Dependencias
+## Dependencias 📚
 
 | Paquete                                | Versión   |
 | -------------------------------------- | --------- |
