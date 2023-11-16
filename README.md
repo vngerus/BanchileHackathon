@@ -36,13 +36,13 @@
 
    ```bash
    npm install
-## Link hacía back-end
+## Link hacia back-end
   <p><a href="https://github.com/Nosst-bot/banchile-challenge">BACKEND</a></p>
 
   
 # <h3> Participantes:</h3>
 <p><a href="https://github.com/AngelSmithlgs">Angel Smith</a></p>
-<a href="https://github.com/Rosa-Enco-Perez">Rosa Enco Perez</a></p>
+<p><a href="https://github.com/Rosa-Enco-Perez">Rosa Enco Perez</a></p>
 <p><a href="https://github.com/Nosst-bot">Kevin Peña Salvatierra</a></p>
 <p><a href="https://github.com/AldoCarquin">Aldo Carquín González</a></p>
-<p><a href="https://github.com/SrMule">Eduardo García</a></p>
+<p>🦝<a href="https://github.com/SrMule">Eduardo García</a></p>
