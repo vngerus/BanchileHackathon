@@ -29,14 +29,14 @@
 | react-switch                           | v7.0.0    |
 | xlsx                                   | v0.18.5   |
 
-## Instalación
+## Instalación 
 
 1. Clona este repositorio.
 2. Instala las dependencias utilizando el siguiente comando:
 
    ```bash
    npm install
-## Link hacia back-end
+## Link hacia back-end ⚙️
   <p><a href="https://github.com/Nosst-bot/banchile-challenge">BACKEND</a></p>
 
   
